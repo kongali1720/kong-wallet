@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KONG WALLET</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <script src="mnemonic.js" defer></script>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="wallet-box">
+    <h1>💰 KONG WALLET</h1>
+
+    <div class="address-section">
+      <label>Wallet Address:</label>
+      <input type="text" id="walletAddress" readonly />
+      <button onclick="generateAddress()">🔄 Generate</button>
+      <button onclick="copyAddress()">📋 Copy</button>
+    </div>
+
+    <div class="balance-section">
+      <h2>Balance</h2>
+      <p>BTC: <span id="btc">0</span></p>
+      <p>ETH: <span id="eth">0</span></p>
+    </div>
+
+    <div class="actions">
+      <input type="text" id="sendTo" placeholder="Send to address"/>
+      <input type="number" id="amount" placeholder="Amount"/>
+      <select id="coinType">
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+      </select>
+      <button onclick="send()">Send</button>
+      <button onclick="receive()">Receive</button>
+    </div>
+
+    <div class="history">
+      <h3>Transaction History</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <div class="backup-section">
+      <h3>Backup Wallet</h3>
+      <button onclick="showBackup()">Show Mnemonic</button>
+      <p id="mnemonicWords"></p>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+</body>
+</html>
