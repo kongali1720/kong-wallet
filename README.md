@@ -56,76 +56,77 @@
 
 ---
 
-## 📂 Struktur Proyek KONG WALLET
+## 📁 Struktur Utama KONG WALLET
 
 ```mermaid
 graph TD
     A[kong-wallet]
-    
+
     A --> B[📱 MOBILE APP]
-    B --> B1(www)
-    B1 --> B11[index.html]
-    B1 --> B12[manifest.json]
-    B1 --> B13[service-worker.js]
-    B1 --> B14[assets/]
-    B1 --> B15[css/]
-    B1 --> B16[js/]
-    B1 --> B17[plugins/]
+    A --> C[🌐 WEB VERSION]
+    A --> D[🖥️ BACKEND/API]
+    A --> E[📦 DEPLOYMENT & DOCUMENTATION]
+```
+
+## 🧠 Struktur Folder KONG WALLET Lengkap
+
+```mermaid
+graph TD
+    A[kong-wallet]
+
+    %% Level 1
+    A --> B[📱 MOBILE APP]
+    A --> C[🌐 WEB VERSION]
+    A --> D[🖥️ BACKEND/API]
+    A --> E[📦 DEPLOYMENT & DOCS]
+
+    %% MOBILE APP
+    B --> B1[www/]
+    B1 --> B1a[index.html]
+    B1 --> B1b[assets/]
+    B1b --> B1b1[icons/]
+    B1b --> B1b2[images/]
+    B1b --> B1b3[fonts/]
+    B1 --> B1c[css/]
+    B1 --> B1d[js/]
     B --> B2[platforms/]
+    B2 --> B2a[android/]
+    B2 --> B2b[ios/]
     B --> B3[plugins/]
     B --> B4[config.xml]
-    B --> B5[package.json]
-    
-    A --> C[🌐 WEB VERSION]
+
+    %% WEB VERSION
     C --> C1[public/]
     C --> C2[src/]
-    C2 --> C21[components/]
-    C2 --> C22[pages/]
-    C2 --> C23[utils/]
-    C2 --> C24[styles/]
-    C2 --> C25[App.js]
-    C2 --> C26[index.js]
+    C2 --> C2a[components/]
+    C2 --> C2b[pages/]
+    C2 --> C2c[utils/]
+    C2 --> C2d[styles/]
     C --> C3[build/]
-    
-    A --> D[🖥️ BACKEND/API]
+    C --> C4[webpack.config.js]
+
+    %% BACKEND/API
     D --> D1[src/]
-    D1 --> D11[controllers/]
-    D1 --> D12[models/]
-    D1 --> D13[routes/]
-    D1 --> D14[middleware/]
-    D1 --> D15[utils/]
-    D1 --> D16[config/]
-    D1 --> D17[app.js]
-    
-    A --> E[📦 DEPLOYMENT]
+    D1 --> D1a[controllers/]
+    D1 --> D1b[models/]
+    D1 --> D1c[routes/]
+    D1 --> D1d[middleware/]
+    D1 --> D1e[utils/]
+    D1 --> D1f[config/]
+    D --> D2[Dockerfile]
+    D --> D3[.env]
+
+    %% DEPLOYMENT & DOCS
     E --> E1[docker/]
     E --> E2[kubernetes/]
     E --> E3[scripts/]
     E --> E4[ci-cd/]
-    
-    A --> F[📱 STORE ASSETS]
-    F --> F1[play-store/]
-    F --> F2[app-store/]
-    
-    A --> G[📋 DOCUMENTATION]
-    G --> G1[docs/]
-    G --> G2[designs/]
-    G --> G3[legal/]
-    
-    A --> H[🧪 TESTING]
-    H --> H1[tests/]
-    H --> H2[fixtures/]
-    
-    A --> I[📊 MONITORING]
-    I --> I1[monitoring/]
-    I --> I2[analytics/]
-    
-    A --> J[🔧 CONFIG]
-    J --> J1[.env.example]
-    J --> J2[README.md]
-    J --> J3[LICENSE]
-    J --> J4[CHANGELOG.md]
+    E --> E5[docs/]
+    E --> E6[designs/]
+    E --> E7[legal/]
+    E --> E8[tests/]
 ```
+
 
 ## 🎯 Tujuan Proyek
 
