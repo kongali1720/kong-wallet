@@ -1,6 +1,8 @@
-<div align="center">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kongali1720/kongali1720.github.io/main/kong-wallet.png" width="400" alt="KONG WALLET Logo"/>
+</p>
 
-# 🦍 KONG WALLET – Secure Crypto Wallet Simulator
+# 🦍 KONG WALLET – Secure Crypto Wallet euyyyy
 
 ![Status](https://img.shields.io/badge/status-Online-brightgreen?style=for-the-badge&logo=github)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge&logo=vercel)
