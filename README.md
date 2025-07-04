@@ -56,6 +56,77 @@
 
 ---
 
+## 📂 Struktur Proyek KONG WALLET
+
+```mermaid
+graph TD
+    A[kong-wallet]
+    
+    A --> B[📱 MOBILE APP]
+    B --> B1(www)
+    B1 --> B11[index.html]
+    B1 --> B12[manifest.json]
+    B1 --> B13[service-worker.js]
+    B1 --> B14[assets/]
+    B1 --> B15[css/]
+    B1 --> B16[js/]
+    B1 --> B17[plugins/]
+    B --> B2[platforms/]
+    B --> B3[plugins/]
+    B --> B4[config.xml]
+    B --> B5[package.json]
+    
+    A --> C[🌐 WEB VERSION]
+    C --> C1[public/]
+    C --> C2[src/]
+    C2 --> C21[components/]
+    C2 --> C22[pages/]
+    C2 --> C23[utils/]
+    C2 --> C24[styles/]
+    C2 --> C25[App.js]
+    C2 --> C26[index.js]
+    C --> C3[build/]
+    
+    A --> D[🖥️ BACKEND/API]
+    D --> D1[src/]
+    D1 --> D11[controllers/]
+    D1 --> D12[models/]
+    D1 --> D13[routes/]
+    D1 --> D14[middleware/]
+    D1 --> D15[utils/]
+    D1 --> D16[config/]
+    D1 --> D17[app.js]
+    
+    A --> E[📦 DEPLOYMENT]
+    E --> E1[docker/]
+    E --> E2[kubernetes/]
+    E --> E3[scripts/]
+    E --> E4[ci-cd/]
+    
+    A --> F[📱 STORE ASSETS]
+    F --> F1[play-store/]
+    F --> F2[app-store/]
+    
+    A --> G[📋 DOCUMENTATION]
+    G --> G1[docs/]
+    G --> G2[designs/]
+    G --> G3[legal/]
+    
+    A --> H[🧪 TESTING]
+    H --> H1[tests/]
+    H --> H2[fixtures/]
+    
+    A --> I[📊 MONITORING]
+    I --> I1[monitoring/]
+    I --> I2[analytics/]
+    
+    A --> J[🔧 CONFIG]
+    J --> J1[.env.example]
+    J --> J2[README.md]
+    J --> J3[LICENSE]
+    J --> J4[CHANGELOG.md]
+```
+
 ## 🎯 Tujuan Proyek
 
 KONG Wallet dibangun sebagai:
@@ -111,6 +182,7 @@ Run it directly, understand instantly.
 </div>
 
 ---
+
 
 <h3 align="center">💡 ☕ Traktir Kopi & Nasi Padang ama nasi Gorengnya ya cuy! 😄</h3>
 
