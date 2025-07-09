@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KONG WALLET - Crypto Wallet Indonesia</title>
-    <meta name="description" content="KONG WALLET - Crypto wallet Indonesia yang aman dan mudah digunakan">
-    <meta name="theme-color" content="#3B82F6">
+    <title>KONG WALLET - Indonesian Crypto Wallet</title>
+    <meta name="description" content="KONG WALLET - Secure and easy-to-use Indonesian crypto wallet">
+    <meta name="theme-color" content="#20B2AA">
     <link rel="icon" href="https://raw.githubusercontent.com/kongali1720/kongali1720.github.io/main/kong-wallet.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -107,14 +108,14 @@
         }
 
         .login-container {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 2rem;
             width: 100%;
             max-width: 400px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         }
 
         .login-logo {
@@ -125,13 +126,26 @@
         .login-logo .logo-circle {
             width: 100px;
             height: 100px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
-            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 32px rgba(32, 178, 170, 0.4);
+            animation: breathe 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes breathe {
+            0%, 100% { 
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            50% { 
+                transform: scale(1.05);
+                filter: brightness(1.1);
+            }
         }
 
         .login-logo h1 {
@@ -139,6 +153,7 @@
             font-weight: 700;
             color: white;
             margin: 1rem 0 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .login-logo p {
@@ -163,13 +178,24 @@
             color: white;
             transition: all 0.3s ease;
             font-family: monospace;
+            animation: glow-input 2s ease-in-out infinite;
+        }
+
+        @keyframes glow-input {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
         }
 
         .pin-input:focus {
             outline: none;
-            border-color: #3b82f6;
+            border-color: #20B2AA;
             background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.3);
+            animation: none;
         }
 
         .pin-input::placeholder {
@@ -189,17 +215,31 @@
             background: rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             transition: all 0.3s ease;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
         }
 
         .pin-dots .dot.filled {
-            background: #3b82f6;
+            background: #20B2AA;
             transform: scale(1.2);
+            animation: pop 0.3s ease-out;
+            box-shadow: 0 0 10px rgba(32, 178, 170, 0.8);
+        }
+
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1.2); }
         }
 
         .login-btn {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #20B2AA 0%, #48D1CC 100%);
             border: none;
             border-radius: 12px;
             color: white;
@@ -208,11 +248,27 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-btn 2s infinite;
+        }
+
+        @keyframes pulse-btn {
+            0% { 
+                box-shadow: 0 0 0 0 rgba(32, 178, 170, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(32, 178, 170, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(32, 178, 170, 0);
+            }
         }
 
         .login-btn:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(32, 178, 170, 0.6);
+            animation: none;
         }
 
         .login-btn:disabled {
@@ -224,8 +280,8 @@
         .biometric-btn {
             width: 100%;
             padding: 1rem;
-            background: rgba(59, 130, 246, 0.1);
-            border: 2px solid rgba(59, 130, 246, 0.2);
+            background: rgba(32, 178, 170, 0.1);
+            border: 2px solid rgba(32, 178, 170, 0.2);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -235,14 +291,25 @@
             transition: all 0.3s ease;
             font-size: 1rem;
             font-weight: 500;
-            color: #3b82f6;
+            color: #20B2AA;
             margin-bottom: 1.5rem;
+            animation: glow 2.5s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(32, 178, 170, 0.5);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(32, 178, 170, 0.8);
+            }
         }
 
         .biometric-btn:hover {
-            background: rgba(59, 130, 246, 0.15);
-            border-color: rgba(59, 130, 246, 0.3);
+            background: rgba(32, 178, 170, 0.15);
+            border-color: rgba(32, 178, 170, 0.3);
             transform: translateY(-1px);
+            animation: none;
         }
 
         /* Main App */
@@ -336,11 +403,19 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             font-size: 1.2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
         }
 
         .notification-btn:hover, .profile-btn:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.1);
+            animation: none;
         }
 
         /* Balance Card */
@@ -355,6 +430,22 @@
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
+            animation: heartbeat 3s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.02); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.01); }
+        }
+
+        .balance-card:hover {
+            background: rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+            animation: none;
         }
 
         .balance-header {
@@ -429,12 +520,23 @@
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
         }
 
         .action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
             background: rgba(0, 0, 0, 0.4);
+            animation: none;
+        }
+
+        .action-btn:active {
+            transform: translateY(-2px) scale(1.05);
         }
 
         .action-icon {
@@ -454,7 +556,7 @@
         }
 
         .send .action-icon {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #20B2AA 0%, #48D1CC 100%);
         }
 
         .swap .action-icon {
@@ -494,7 +596,7 @@
         .add-token-btn, .view-all-btn {
             background: none;
             border: none;
-            color: #3b82f6;
+            color: #20B2AA;
             font-weight: 500;
             cursor: pointer;
             padding: 0.5rem 0.75rem;
@@ -503,7 +605,7 @@
         }
 
         .add-token-btn:hover, .view-all-btn:hover {
-            background: rgba(59, 130, 246, 0.2);
+            background: rgba(32, 178, 170, 0.2);
         }
 
         .assets-list, .transactions-list {
@@ -522,6 +624,12 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
             transition: all 0.3s ease;
+            animation: fadeIn 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0.8; }
+            100% { opacity: 1; }
         }
 
         .asset-item:last-child, .transaction-item:last-child {
@@ -530,6 +638,9 @@
 
         .asset-item:hover, .transaction-item:hover {
             background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px) scale(1.02);
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+            animation: none;
         }
 
         .asset-icon, .transaction-icon {
@@ -543,22 +654,83 @@
             font-weight: 700;
             color: white;
             margin-right: 1rem;
+            background-size: 24px 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .asset-icon:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        /* Enhanced logo loading states */
+        .asset-icon.loading:after {
+            content: '⟳';
+            animation: spin 1s linear infinite;
+            font-size: 1rem;
+        }
+
+        .asset-icon.loaded {
+            font-size: 0;
+        }
+
+        .asset-icon.error {
+            background-image: none !important;
         }
 
         .asset-icon.btc {
             background: linear-gradient(135deg, #f7931a 0%, #ff6b35 100%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .asset-icon.btc:after {
+            content: '₿';
         }
 
         .asset-icon.eth {
             background: linear-gradient(135deg, #627eea 0%, #4f46e5 100%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .asset-icon.eth:after {
+            content: 'Ξ';
         }
 
         .asset-icon.bnb {
             background: linear-gradient(135deg, #f3ba2f 0%, #fbbf24 100%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .asset-icon.bnb:after {
+            content: 'B';
         }
 
         .asset-icon.usdt {
             background: linear-gradient(135deg, #26a17b 0%, #10b981 100%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .asset-icon.usdt:after {
+            content: '₮';
         }
 
         .transaction-icon.receive {
@@ -566,7 +738,7 @@
         }
 
         .transaction-icon.send {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #20B2AA 0%, #48D1CC 100%);
         }
 
         .transaction-icon.swap {
@@ -648,14 +820,17 @@
             border-radius: 8px;
             transition: all 0.3s ease;
             color: rgba(255, 255, 255, 0.7);
+            animation: bounce 2s infinite;
         }
 
         .nav-btn.active {
-            color: #3b82f6;
+            color: #20B2AA;
         }
 
         .nav-btn:hover {
             background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.2);
+            animation: none;
         }
 
         .nav-icon {
@@ -771,15 +946,15 @@
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none;
-            border-color: #3b82f6;
+            border-color: #20B2AA;
             background: rgba(0, 0, 0, 0.6);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.3);
         }
 
         .send-btn, .swap-btn, .buy-btn {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #20B2AA 0%, #48D1CC 100%);
             border: none;
             border-radius: 8px;
             color: white;
@@ -790,7 +965,7 @@
 
         .send-btn:hover, .swap-btn:hover, .buy-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 20px rgba(32, 178, 170, 0.4);
         }
 
         .address-box {
@@ -811,7 +986,7 @@
         }
 
         .address-box button {
-            background: #3b82f6;
+            background: #20B2AA;
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -882,6 +1057,472 @@
             20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
 
+        /* Loading Spinner */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #20B2AA;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Portfolio Styles */
+        .portfolio-container, .market-container, .history-container, .settings-container {
+            padding: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-header, .market-header, .history-header, .settings-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-header h2, .market-header h2, .history-header h2, .settings-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-header p, .market-header p, .history-header p, .settings-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .chart-container {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .chart-placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .allocation-list {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .allocation-item {
+            margin-bottom: 1rem;
+        }
+
+        .allocation-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .allocation-name {
+            color: white;
+            font-weight: 500;
+        }
+
+        .allocation-percentage {
+            color: #20B2AA;
+            font-weight: 600;
+        }
+
+        .allocation-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .allocation-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .metric-value.positive {
+            color: #059669;
+        }
+
+        .metric-value.negative {
+            color: #dc2626;
+        }
+
+        /* Market Styles */
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-change {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .stat-change.positive {
+            color: #059669;
+        }
+
+        .stat-change.negative {
+            color: #dc2626;
+        }
+
+        .market-list {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .market-header-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+        }
+
+        .market-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .market-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .market-coin {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .coin-name {
+            color: white;
+            font-weight: 500;
+        }
+
+        .coin-symbol {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .market-price {
+            color: white;
+            font-weight: 600;
+        }
+
+        .market-change {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .market-change.positive {
+            color: #059669;
+        }
+
+        .market-change.negative {
+            color: #dc2626;
+        }
+
+        .trade-btn {
+            background: #20B2AA;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .trade-btn:hover {
+            background: #1a9b94;
+            transform: translateY(-1px);
+        }
+
+        /* History Styles */
+        .history-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-select {
+            flex: 1;
+            padding: 0.75rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.875rem;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #20B2AA;
+        }
+
+        .history-list {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .history-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .history-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .transaction-hash {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.25rem;
+        }
+
+        /* Settings Styles */
+        .settings-section {
+            margin-bottom: 2rem;
+        }
+
+        .settings-section h3 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .settings-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .setting-info {
+            flex: 1;
+        }
+
+        .setting-name {
+            color: white;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .setting-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .setting-btn {
+            background: #20B2AA;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .setting-btn:hover {
+            background: #1a9b94;
+            transform: translateY(-1px);
+        }
+
+        .setting-select {
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            color: white;
+            font-size: 0.875rem;
+        }
+
+        .setting-select:focus {
+            outline: none;
+            border-color: #20B2AA;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #20B2AA;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .settings-logout {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .logout-btn {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0 auto;
+        }
+
+        .logout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+        }
+
         /* Responsive */
         @media (max-width: 480px) {
             .login-container {
@@ -894,13 +1535,26 @@
                 padding: 0 0.5rem;
             }
             
-            .balance-card, .quick-actions, .assets-section, .transactions-section {
+            .balance-card, .quick-actions, .assets-section, .transactions-section,
+            .portfolio-container, .market-container, .history-container, .settings-container {
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
             }
             
             .quick-actions {
                 padding: 0.5rem;
+            }
+            
+            .market-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .history-filters {
+                flex-direction: column;
             }
         }
     </style>
@@ -930,12 +1584,11 @@
                     <img src="https://raw.githubusercontent.com/kongali1720/kongali1720.github.io/main/kong-wallet.png" alt="KONG WALLET" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
                 </div>
                 <h1>KONG WALLET</h1>
-                <p>Crypto Wallet Indonesia</p>
+                <p>Indonesian Crypto Wallet</p>
             </div>
 
             <div class="login-form">
-                <h2 style="color: white;">Masuk ke KONG WALLET</h2>
-                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 1.5rem;">Masukkan PIN 6 digit untuk mengakses KONG WALLET Anda</p>
+                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 1.5rem; text-align: center;">Enter your 6-digit PIN to access your KONG WALLET</p>
                 
                 <div class="pin-container">
                     <input 
@@ -957,31 +1610,31 @@
                 </div>
 
                 <button id="login-btn" class="login-btn" onclick="loginWithPIN()">
-                    Masuk ke Wallet
+                    <i class="fas fa-unlock"></i> Access Wallet
                 </button>
 
                 <button class="biometric-btn" onclick="loginWithBiometric()">
-                    <span style="font-size: 1.5rem;">👆</span>
-                    <span>Login dengan Biometrik</span>
+                    <i class="fas fa-fingerprint"></i>
+                    <span>Login with Biometric</span>
                 </button>
 
                 <div style="text-align: center; margin-top: 1rem;">
-                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">💡 Demo PIN: <strong style="color: white;">123456</strong></p>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">💡 Demo PIN: <strong style="color: #20B2AA;">123456</strong></p>
                 </div>
             </div>
 
             <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 1rem; border-radius: 12px; margin-top: 1.5rem;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🔒</span>
-                    <span style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);">PIN disimpan dengan enkripsi AES-256</span>
+                    <i class="fas fa-lock" style="color: #20B2AA;"></i>
+                    <span style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);">PIN encrypted with AES-256</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <span style="font-size: 1.25rem;">🛡️</span>
-                    <span style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);">Data tersimpan lokal, tidak di server</span>
+                    <i class="fas fa-shield-alt" style="color: #20B2AA;"></i>
+                    <span style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);">Data stored locally, not on server</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <span style="font-size: 1.25rem;">⚡</span>
-                    <span style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);">Akses cepat dengan biometrik</span>
+                    <i class="fas fa-bolt" style="color: #20B2AA;"></i>
+                    <span style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);">Quick access with biometric</span>
                 </div>
             </div>
         </div>
@@ -998,139 +1651,489 @@
                     </div>
                     <div class="header-info">
                         <h1>KONG WALLET</h1>
-                        <p>Crypto Wallet Indonesia</p>
+                        <p>Indonesian Crypto Wallet</p>
                     </div>
                 </div>
                 <div class="header-right">
-                    <button class="notification-btn" onclick="showToast('Notifikasi akan hadir segera!')">
-                        🔔
+                    <button class="notification-btn" onclick="showToast('Notifications coming soon!')">
+                        <i class="fas fa-bell"></i>
                     </button>
                     <button class="profile-btn" onclick="logout()">
-                        👤
+                        <i class="fas fa-user"></i>
                     </button>
                 </div>
             </div>
         </header>
 
-        <!-- Balance Card -->
-        <div class="balance-card">
-            <div class="balance-header">
-                <span class="balance-label">Total Balance</span>
-                <button id="toggle-balance" class="toggle-btn">👁️</button>
+        <!-- Home Tab -->
+        <div id="home-tab" class="tab-content active">
+            <!-- Balance Card -->
+            <div class="balance-card">
+                <div class="balance-header">
+                    <span class="balance-label">Total Balance</span>
+                    <button id="toggle-balance" class="toggle-btn"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="balance-amount">
+                    <h2 id="balance-display">$15,420,500</h2>
+                    <p class="balance-usd">≈ $1,028 USD</p>
+                </div>
+                <div class="balance-change">
+                    <span class="change-positive"><i class="fas fa-chart-line"></i> +2.5% today</span>
+                </div>
             </div>
-            <div class="balance-amount">
-                <h2 id="balance-display">Rp 15,420,500</h2>
-                <p class="balance-usd">≈ $1,028 USD</p>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-btn receive" onclick="showReceive()">
+                    <div class="action-icon"><i class="fas fa-arrow-down"></i></div>
+                    <span>Receive</span>
+                </button>
+                <button class="action-btn send" onclick="showSend()">
+                    <div class="action-icon"><i class="fas fa-arrow-up"></i></div>
+                    <span>Send</span>
+                </button>
+                <button class="action-btn swap" onclick="showSwap()">
+                    <div class="action-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <span>Swap</span>
+                </button>
+                <button class="action-btn buy" onclick="showBuy()">
+                    <div class="action-icon"><i class="fas fa-credit-card"></i></div>
+                    <span>Buy</span>
+                </button>
             </div>
-            <div class="balance-change">
-                <span class="change-positive">📈 +2.5% hari ini</span>
+
+            <!-- Assets Section -->
+            <div class="assets-section">
+                <div class="section-header">
+                    <h3>Crypto Assets</h3>
+                    <button class="add-token-btn" onclick="showToast('Add token coming soon!')">+ Add</button>
+                </div>
+                <div class="assets-list">
+                    <div class="asset-item" onclick="showAssetDetails('BTC')">
+                        <div class="asset-icon btc"></div>
+                        <div class="asset-info">
+                            <div class="asset-name">Bitcoin</div>
+                            <div class="asset-amount">0.2534 BTC</div>
+                        </div>
+                        <div class="asset-value">
+                            <div class="asset-price">$680,500,000</div>
+                            <div class="asset-change positive">+2.5%</div>
+                        </div>
+                    </div>
+                    <div class="asset-item" onclick="showAssetDetails('ETH')">
+                        <div class="asset-icon eth"></div>
+                        <div class="asset-info">
+                            <div class="asset-name">Ethereum</div>
+                            <div class="asset-amount">3.2156 ETH</div>
+                        </div>
+                        <div class="asset-value">
+                            <div class="asset-price">$50,000,000</div>
+                            <div class="asset-change negative">-1.2%</div>
+                        </div>
+                    </div>
+                    <div class="asset-item" onclick="showAssetDetails('BNB')">
+                        <div class="asset-icon bnb"></div>
+                        <div class="asset-info">
+                            <div class="asset-name">BNB</div>
+                            <div class="asset-amount">25.75 BNB</div>
+                        </div>
+                        <div class="asset-value">
+                            <div class="asset-price">$5,100,000</div>
+                            <div class="asset-change positive">+3.8%</div>
+                        </div>
+                    </div>
+                    <div class="asset-item" onclick="showAssetDetails('USDT')">
+                        <div class="asset-icon usdt"></div>
+                        <div class="asset-info">
+                            <div class="asset-name">Tether</div>
+                            <div class="asset-amount">1,250 USDT</div>
+                        </div>
+                        <div class="asset-value">
+                            <div class="asset-price">$15,000</div>
+                            <div class="asset-change positive">+0.1%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transactions Section -->
+            <div class="transactions-section">
+                <div class="section-header">
+                    <h3>Recent Transactions</h3>
+                    <button class="view-all-btn" onclick="showTab('History')">View All</button>
+                </div>
+                <div class="transactions-list">
+                    <div class="transaction-item">
+                        <div class="transaction-icon receive"><i class="fas fa-arrow-down"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Receive Bitcoin</div>
+                            <div class="transaction-date">15 Jan 2024</div>
+                        </div>
+                        <div class="transaction-amount positive">+0.025 BTC</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-icon send"><i class="fas fa-arrow-up"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Send Ethereum</div>
+                            <div class="transaction-date">14 Jan 2024</div>
+                        </div>
+                        <div class="transaction-amount negative">-1.5 ETH</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-icon swap"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Swap to USDT</div>
+                            <div class="transaction-date">13 Jan 2024</div>
+                        </div>
+                        <div class="transaction-amount positive">+500 USDT</div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Quick Actions -->
-        <div class="quick-actions">
-            <button class="action-btn receive" onclick="showReceive()">
-                <div class="action-icon">📥</div>
-                <span>Terima</span>
-            </button>
-            <button class="action-btn send" onclick="showSend()">
-                <div class="action-icon">📤</div>
-                <span>Kirim</span>
-            </button>
-            <button class="action-btn swap" onclick="showSwap()">
-                <div class="action-icon">🔄</div>
-                <span>Tukar</span>
-            </button>
-            <button class="action-btn buy" onclick="showBuy()">
-                <div class="action-icon">💳</div>
-                <span>Beli</span>
-            </button>
+        <!-- Portfolio Tab -->
+        <div id="portfolio-tab" class="tab-content">
+            <div class="portfolio-container">
+                <div class="portfolio-header">
+                    <h2>Portfolio Overview</h2>
+                    <p>Track your crypto investments and performance</p>
+                </div>
+                
+                <div class="portfolio-chart">
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-pie" style="font-size: 4rem; color: #20B2AA; margin-bottom: 1rem;"></i>
+                            <p>Portfolio Distribution</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-allocation">
+                    <h3>Asset Allocation</h3>
+                    <div class="allocation-list">
+                        <div class="allocation-item">
+                            <div class="allocation-info">
+                                <div class="allocation-name">Bitcoin (BTC)</div>
+                                <div class="allocation-percentage">65.2%</div>
+                            </div>
+                            <div class="allocation-bar">
+                                <div class="allocation-fill" style="width: 65.2%; background: #f7931a;"></div>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-info">
+                                <div class="allocation-name">Ethereum (ETH)</div>
+                                <div class="allocation-percentage">22.8%</div>
+                            </div>
+                            <div class="allocation-bar">
+                                <div class="allocation-fill" style="width: 22.8%; background: #627eea;"></div>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-info">
+                                <div class="allocation-name">BNB</div>
+                                <div class="allocation-percentage">8.5%</div>
+                            </div>
+                            <div class="allocation-bar">
+                                <div class="allocation-fill" style="width: 8.5%; background: #f3ba2f;"></div>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-info">
+                                <div class="allocation-name">USDT</div>
+                                <div class="allocation-percentage">3.5%</div>
+                            </div>
+                            <div class="allocation-bar">
+                                <div class="allocation-fill" style="width: 3.5%; background: #26a17b;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-performance">
+                    <h3>Performance Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <div class="metric-label">Total PnL</div>
+                            <div class="metric-value positive">+$2,450.50</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">24h Change</div>
+                            <div class="metric-value positive">+2.5%</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Best Performer</div>
+                            <div class="metric-value">BNB +3.8%</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Worst Performer</div>
+                            <div class="metric-value negative">ETH -1.2%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Assets Section -->
-        <div class="assets-section">
-            <div class="section-header">
-                <h3>Aset Crypto</h3>
-                <button class="add-token-btn" onclick="showToast('Tambah token akan hadir segera!')">+ Tambah</button>
-            </div>
-            <div class="assets-list">
-                <div class="asset-item" onclick="showAssetDetails('BTC')">
-                    <div class="asset-icon btc">₿</div>
-                    <div class="asset-info">
-                        <div class="asset-name">Bitcoin</div>
-                        <div class="asset-amount">0.2534 BTC</div>
+        <!-- Market Tab -->
+        <div id="market-tab" class="tab-content">
+            <div class="market-container">
+                <div class="market-header">
+                    <h2>Market Overview</h2>
+                    <p>Real-time crypto market data</p>
+                </div>
+                
+                <div class="market-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Market Cap</div>
+                        <div class="stat-value">$2.1T</div>
+                        <div class="stat-change positive">+2.1%</div>
                     </div>
-                    <div class="asset-value">
-                        <div class="asset-price">Rp 680,500,000</div>
-                        <div class="asset-change positive">+2.5%</div>
+                    <div class="stat-card">
+                        <div class="stat-label">24h Volume</div>
+                        <div class="stat-value">$89.2B</div>
+                        <div class="stat-change positive">+5.3%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">BTC Dominance</div>
+                        <div class="stat-value">42.3%</div>
+                        <div class="stat-change negative">-0.5%</div>
                     </div>
                 </div>
-                <div class="asset-item" onclick="showAssetDetails('ETH')">
-                    <div class="asset-icon eth">Ξ</div>
-                    <div class="asset-info">
-                        <div class="asset-name">Ethereum</div>
-                        <div class="asset-amount">3.2156 ETH</div>
+                
+                <div class="market-list">
+                    <div class="market-header-row">
+                        <div>Coin</div>
+                        <div>Price</div>
+                        <div>24h Change</div>
+                        <div>Action</div>
                     </div>
-                    <div class="asset-value">
-                        <div class="asset-price">Rp 50,000,000</div>
-                        <div class="asset-change negative">-1.2%</div>
+                    <div class="market-item">
+                        <div class="market-coin">
+                            <div class="asset-icon btc"></div>
+                            <div>
+                                <div class="coin-name">Bitcoin</div>
+                                <div class="coin-symbol">BTC</div>
+                            </div>
+                        </div>
+                        <div class="market-price">$65,420</div>
+                        <div class="market-change positive">+2.5%</div>
+                        <div class="market-action">
+                            <button class="trade-btn" onclick="showBuy()">Trade</button>
+                        </div>
                     </div>
-                </div>
-                <div class="asset-item" onclick="showAssetDetails('BNB')">
-                    <div class="asset-icon bnb">B</div>
-                    <div class="asset-info">
-                        <div class="asset-name">BNB</div>
-                        <div class="asset-amount">25.75 BNB</div>
+                    <div class="market-item">
+                        <div class="market-coin">
+                            <div class="asset-icon eth"></div>
+                            <div>
+                                <div class="coin-name">Ethereum</div>
+                                <div class="coin-symbol">ETH</div>
+                            </div>
+                        </div>
+                        <div class="market-price">$3,245</div>
+                        <div class="market-change negative">-1.2%</div>
+                        <div class="market-action">
+                            <button class="trade-btn" onclick="showBuy()">Trade</button>
+                        </div>
                     </div>
-                    <div class="asset-value">
-                        <div class="asset-price">Rp 5,100,000</div>
-                        <div class="asset-change positive">+3.8%</div>
-                    </div>
-                </div>
-                <div class="asset-item" onclick="showAssetDetails('USDT')">
-                    <div class="asset-icon usdt">₮</div>
-                    <div class="asset-info">
-                        <div class="asset-name">Tether</div>
-                        <div class="asset-amount">1,250 USDT</div>
-                    </div>
-                    <div class="asset-value">
-                        <div class="asset-price">Rp 15,000</div>
-                        <div class="asset-change positive">+0.1%</div>
+                    <div class="market-item">
+                        <div class="market-coin">
+                            <div class="asset-icon bnb"></div>
+                            <div>
+                                <div class="coin-name">BNB</div>
+                                <div class="coin-symbol">BNB</div>
+                            </div>
+                        </div>
+                        <div class="market-price">$435</div>
+                        <div class="market-change positive">+3.8%</div>
+                        <div class="market-action">
+                            <button class="trade-btn" onclick="showBuy()">Trade</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Transactions Section -->
-        <div class="transactions-section">
-            <div class="section-header">
-                <h3>Transaksi Terakhir</h3>
-                <button class="view-all-btn" onclick="showToast('Lihat semua transaksi akan hadir segera!')">Lihat Semua</button>
+        <!-- History Tab -->
+        <div id="history-tab" class="tab-content">
+            <div class="history-container">
+                <div class="history-header">
+                    <h2>Transaction History</h2>
+                    <p>Complete record of all transactions</p>
+                </div>
+                
+                <div class="history-filters">
+                    <select class="filter-select">
+                        <option value="all">All Transactions</option>
+                        <option value="send">Send</option>
+                        <option value="receive">Receive</option>
+                        <option value="swap">Swap</option>
+                        <option value="buy">Buy</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="all">All Assets</option>
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="BNB">BNB</option>
+                        <option value="USDT">USDT</option>
+                    </select>
+                </div>
+                
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="transaction-icon receive"><i class="fas fa-arrow-down"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Receive Bitcoin</div>
+                            <div class="transaction-date">15 Jan 2024, 10:30 AM</div>
+                            <div class="transaction-hash">0x1234...5678</div>
+                        </div>
+                        <div class="transaction-amount positive">+0.025 BTC</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="transaction-icon send"><i class="fas fa-arrow-up"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Send Ethereum</div>
+                            <div class="transaction-date">14 Jan 2024, 3:15 PM</div>
+                            <div class="transaction-hash">0xabcd...efgh</div>
+                        </div>
+                        <div class="transaction-amount negative">-1.5 ETH</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="transaction-icon swap"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Swap to USDT</div>
+                            <div class="transaction-date">13 Jan 2024, 1:45 PM</div>
+                            <div class="transaction-hash">0x9876...5432</div>
+                        </div>
+                        <div class="transaction-amount positive">+500 USDT</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="transaction-icon buy"><i class="fas fa-credit-card"></i></div>
+                        <div class="transaction-info">
+                            <div class="transaction-type">Buy Bitcoin</div>
+                            <div class="transaction-date">12 Jan 2024, 9:20 AM</div>
+                            <div class="transaction-hash">0xfedc...ba98</div>
+                        </div>
+                        <div class="transaction-amount positive">+0.1 BTC</div>
+                    </div>
+                </div>
             </div>
-            <div class="transactions-list">
-                <div class="transaction-item">
-                    <div class="transaction-icon receive">📥</div>
-                    <div class="transaction-info">
-                        <div class="transaction-type">Terima Bitcoin</div>
-                        <div class="transaction-date">15 Jan 2024</div>
-                    </div>
-                    <div class="transaction-amount positive">+0.025 BTC</div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings-tab" class="tab-content">
+            <div class="settings-container">
+                <div class="settings-header">
+                    <h2>Settings</h2>
+                    <p>Manage your wallet preferences</p>
                 </div>
-                <div class="transaction-item">
-                    <div class="transaction-icon send">📤</div>
-                    <div class="transaction-info">
-                        <div class="transaction-type">Kirim Ethereum</div>
-                        <div class="transaction-date">14 Jan 2024</div>
+                
+                <div class="settings-section">
+                    <h3>Security</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Change PIN</div>
+                            <div class="setting-desc">Update your wallet access PIN</div>
+                        </div>
+                        <button class="setting-btn" onclick="showToast('Change PIN feature coming soon!')">Change</button>
                     </div>
-                    <div class="transaction-amount negative">-1.5 ETH</div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Biometric Login</div>
+                            <div class="setting-desc">Enable fingerprint/face recognition</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Auto-Lock</div>
+                            <div class="setting-desc">Automatically lock wallet after inactivity</div>
+                        </div>
+                        <select class="setting-select">
+                            <option value="1">1 minute</option>
+                            <option value="5" selected>5 minutes</option>
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="transaction-item">
-                    <div class="transaction-icon swap">��</div>
-                    <div class="transaction-info">
-                        <div class="transaction-type">Tukar ke USDT</div>
-                        <div class="transaction-date">13 Jan 2024</div>
+                
+                <div class="settings-section">
+                    <h3>Preferences</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Currency</div>
+                            <div class="setting-desc">Display currency preference</div>
+                        </div>
+                        <select class="setting-select">
+                            <option value="USD" selected>USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="IDR">IDR (Rp)</option>
+                        </select>
                     </div>
-                    <div class="transaction-amount positive">+500 USDT</div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Language</div>
+                            <div class="setting-desc">App language preference</div>
+                        </div>
+                        <select class="setting-select">
+                            <option value="en" selected>English</option>
+                            <option value="id">Indonesian</option>
+                        </select>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Notifications</div>
+                            <div class="setting-desc">Push notifications for transactions</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Backup & Recovery</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Backup Phrase</div>
+                            <div class="setting-desc">View and secure your recovery phrase</div>
+                        </div>
+                        <button class="setting-btn" onclick="showToast('Backup phrase feature coming soon!')">View</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Export Private Keys</div>
+                            <div class="setting-desc">Export wallet private keys</div>
+                        </div>
+                        <button class="setting-btn" onclick="showToast('Export keys feature coming soon!')">Export</button>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>About</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">App Version</div>
+                            <div class="setting-desc">KONG WALLET v1.0.0</div>
+                        </div>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Support</div>
+                            <div class="setting-desc">Get help and contact support</div>
+                        </div>
+                        <button class="setting-btn" onclick="showToast('Support feature coming soon!')">Contact</button>
+                    </div>
+                </div>
+                
+                <div class="settings-logout">
+                    <button class="logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
                 </div>
             </div>
         </div>
@@ -1139,23 +2142,23 @@
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
         <button class="nav-btn active" onclick="showTab('Home')">
-            <div class="nav-icon">🏠</div>
+            <div class="nav-icon"><i class="fas fa-home"></i></div>
             <span>Home</span>
         </button>
         <button class="nav-btn" onclick="showTab('Portfolio')">
-            <div class="nav-icon">📊</div>
+            <div class="nav-icon"><i class="fas fa-chart-pie"></i></div>
             <span>Portfolio</span>
         </button>
         <button class="nav-btn" onclick="showTab('Market')">
-            <div class="nav-icon">📈</div>
+            <div class="nav-icon"><i class="fas fa-chart-line"></i></div>
             <span>Market</span>
         </button>
         <button class="nav-btn" onclick="showTab('History')">
-            <div class="nav-icon">📋</div>
+            <div class="nav-icon"><i class="fas fa-history"></i></div>
             <span>History</span>
         </button>
         <button class="nav-btn" onclick="showTab('Settings')">
-            <div class="nav-icon">⚙️</div>
+            <div class="nav-icon"><i class="fas fa-cog"></i></div>
             <span>Settings</span>
         </button>
     </nav>
@@ -1181,7 +2184,7 @@
         </div>
     </div>
 
-    <script>
+    <script type="module">
         // KONG WALLET Unified App - Login + Wallet
         class KongWalletApp {
             constructor() {
@@ -1231,7 +2234,7 @@
                     const sessionTimeout = 24 * 60 * 60 * 1000; // 24 hours
                     
                     if (timeDiff < sessionTimeout) {
-                        this.showToast('Sesi tersimpan! Masukkan PIN untuk melanjutkan.', 'success');
+                        this.showToast('Session saved! Enter PIN to continue.', 'success');
                         this.showLoginScreen();
                         return;
                     } else {
@@ -1241,7 +2244,7 @@
                 }
                 
                 this.showLoginScreen();
-                this.showToast('Selamat datang di KONG WALLET! 🦍', 'success');
+                this.showToast('Welcome to KONG WALLET! 🦍', 'success');
             }
 
             showLoginScreen() {
@@ -1319,13 +2322,13 @@
                 const enteredPIN = pinInput.value;
 
                 if (enteredPIN.length !== 6) {
-                    this.showError('PIN harus 6 digit');
+                    this.showError('PIN must be 6 digits');
                     return;
                 }
 
                 const loginBtn = document.getElementById('login-btn');
                 if (loginBtn) {
-                    loginBtn.textContent = 'Memverifikasi...';
+                    loginBtn.innerHTML = '<div class="spinner"></div>';
                     loginBtn.disabled = true;
                 }
 
@@ -1340,7 +2343,7 @@
             }
 
             async loginWithBiometric() {
-                this.showToast('Memverifikasi biometrik...', 'info');
+                this.showToast('Verifying biometric...', 'info');
                 
                 // Simulate biometric auth
                 await this.delay(1500);
@@ -1348,7 +2351,7 @@
                 if (Math.random() > 0.1) { // 90% success rate
                     this.loginSuccess(true);
                 } else {
-                    this.showError('Autentikasi biometrik gagal');
+                    this.showError('Biometric authentication failed');
                 }
             }
 
@@ -1360,7 +2363,7 @@
                 localStorage.setItem('kong_login_time', Date.now().toString());
                 
                 if (showWelcome) {
-                    this.showToast('Login berhasil! Selamat datang! 🎉', 'success');
+                    this.showToast('Login successful! Welcome! 🎉', 'success');
                 }
                 
                 // Reset login form
@@ -1373,7 +2376,7 @@
                 }
                 
                 if (loginBtn) {
-                    loginBtn.textContent = 'Masuk ke Wallet';
+                    loginBtn.innerHTML = '<i class="fas fa-unlock"></i> Access Wallet';
                     loginBtn.disabled = false;
                 }
                 
@@ -1382,7 +2385,7 @@
                     this.showMainApp();
                     if (showWelcome) {
                         setTimeout(() => {
-                            this.showToast('Selamat datang di KONG WALLET! 🚀', 'success');
+                            this.showToast('Welcome to KONG WALLET! 🚀', 'success');
                         }, 1000);
                     }
                 }, 800);
@@ -1392,7 +2395,7 @@
                 const pinInput = document.getElementById('pin-input');
                 const loginBtn = document.getElementById('login-btn');
                 
-                this.showError('PIN salah! Coba lagi.');
+                this.showError('Wrong PIN! Try again.');
                 
                 if (pinInput) {
                     pinInput.value = '';
@@ -1403,7 +2406,7 @@
                 }
                 
                 if (loginBtn) {
-                    loginBtn.textContent = 'Masuk ke Wallet';
+                    loginBtn.innerHTML = '<i class="fas fa-unlock"></i> Access Wallet';
                     loginBtn.disabled = false;
                 }
             }
@@ -1415,12 +2418,12 @@
                 
                 if (balanceDisplay) {
                     balanceDisplay.textContent = this.isBalanceVisible 
-                        ? `Rp ${this.balance.toLocaleString()}` 
+                        ? `${this.balance.toLocaleString()}` 
                         : '••••••••';
                 }
                 
                 if (toggleBtn) {
-                    toggleBtn.textContent = this.isBalanceVisible ? '👁️' : '🙈';
+                    toggleBtn.innerHTML = this.isBalanceVisible ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
                 }
             }
 
@@ -1464,13 +2467,13 @@
             }
 
             logout() {
-                const confirmed = confirm('Yakin ingin keluar dari KONG WALLET?');
+                const confirmed = confirm('Are you sure you want to logout from KONG WALLET?');
                 if (confirmed) {
                     this.isLoggedIn = false;
                     localStorage.removeItem('kong_logged_in');
                     localStorage.removeItem('kong_login_time');
                     
-                    this.showToast('Berhasil logout. Sampai jumpa! 👋', 'success');
+                    this.showToast('Logout successful. See you later! 👋', 'success');
                     
                     setTimeout(() => {
                         this.showLoginScreen();
@@ -1480,6 +2483,40 @@
 
             delay(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            showTab(tab) {
+                // Hide all tab contents
+                const tabContents = document.querySelectorAll('.tab-content');
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Show selected tab content
+                const selectedTab = document.getElementById(`${tab.toLowerCase()}-tab`);
+                if (selectedTab) {
+                    selectedTab.classList.add('active');
+                }
+                
+                // Update navigation buttons
+                const navButtons = document.querySelectorAll('.nav-btn');
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Find and activate the clicked button
+                const activeBtn = Array.from(navButtons).find(btn => 
+                    btn.textContent.toLowerCase().includes(tab.toLowerCase())
+                );
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                }
+                
+                // Refresh logos when switching tabs
+                setTimeout(() => {
+                    if (window.logoManager) {
+                        window.logoManager.refreshLogos();
+                    }
+                }, 100);
+                
+                // Show appropriate toast message
+                this.showToast(`${tab} tab activated`, 'success');
             }
         }
 
@@ -1501,33 +2538,63 @@
         function showReceive() {
             const content = `
                 <div class="qr-container">
-                    <div class="qr-code">📱</div>
-                    <p>Alamat Bitcoin Anda:</p>
-                    <div class="address-box">
-                        <code>1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</code>
-                        <button onclick="copyAddress()">📋 Copy</button>
+                    <div class="form-group">
+                        <label>Select Crypto to Receive</label>
+                        <select id="receive-crypto" onchange="updateReceiveAddress()">
+                            <option value="BTC">Bitcoin (BTC)</option>
+                            <option value="ETH">Ethereum (ETH)</option>
+                            <option value="BNB">BNB (BNB)</option>
+                            <option value="USDT">Tether (USDT)</option>
+                        </select>
                     </div>
-                    <p style="font-size: 0.875rem; color: #64748b; margin-top: 1rem;">
-                        Kirim hanya Bitcoin (BTC) ke alamat ini. Mengirim coin lain akan menyebabkan kehilangan permanen.
-                    </p>
+                    <div class="qr-code-container">
+                        <canvas id="qr-canvas" width="200" height="200" style="border: 2px solid rgba(255,255,255,0.3); border-radius: 12px; background: white; margin: 1rem 0;"></canvas>
+                    </div>
+                    <div class="address-section">
+                        <p style="font-weight: 600; color: white; margin-bottom: 0.5rem;">Your <span id="crypto-name">Bitcoin</span> Address:</p>
+                        <div class="address-box">
+                            <code id="wallet-address">1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</code>
+                            <button onclick="copyAddress()"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+                    </div>
+                    <div class="receive-amount">
+                        <div class="form-group">
+                            <label>Amount (Optional)</label>
+                            <input type="number" placeholder="0.00" id="receive-amount" step="0.00000001" onchange="updateQRCode()">
+                        </div>
+                    </div>
+                    <div class="security-warning" style="background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-exclamation-triangle" style="color: #ffc107;"></i>
+                            <span style="font-weight: 600; color: #ffc107;">Security Warning</span>
+                        </div>
+                        <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9); margin: 0;">
+                            Send only <span id="warning-crypto">Bitcoin (BTC)</span> to this address. Sending other cryptocurrencies will result in permanent loss of funds.
+                        </p>
+                    </div>
                 </div>
             `;
-            app.showModal('Terima Crypto', content);
+            app.showModal('Receive Crypto', content);
+            
+            // Generate QR code after modal is shown
+            setTimeout(() => {
+                generateQRCode();
+            }, 100);
         }
 
         function showSend() {
             const content = `
                 <div class="send-form">
                     <div class="form-group">
-                        <label>Alamat Tujuan</label>
-                        <input type="text" placeholder="Masukkan alamat wallet" id="send-address">
+                        <label>Destination Address</label>
+                        <input type="text" placeholder="Enter wallet address" id="send-address">
                     </div>
                     <div class="form-group">
-                        <label>Jumlah</label>
+                        <label>Amount</label>
                         <input type="number" placeholder="0.00" id="send-amount" step="0.00000001">
                     </div>
                     <div class="form-group">
-                        <label>Pilih Crypto</label>
+                        <label>Select Crypto</label>
                         <select id="send-crypto">
                             <option value="BTC">Bitcoin (BTC)</option>
                             <option value="ETH">Ethereum (ETH)</option>
@@ -1535,17 +2602,17 @@
                             <option value="USDT">Tether (USDT)</option>
                         </select>
                     </div>
-                    <button onclick="sendCrypto()" class="send-btn">Kirim Crypto</button>
+                    <button onclick="sendCrypto()" class="send-btn"><i class="fas fa-paper-plane"></i> Send Crypto</button>
                 </div>
             `;
-            app.showModal('Kirim Crypto', content);
+            app.showModal('Send Crypto', content);
         }
 
         function showSwap() {
             const content = `
                 <div class="swap-form">
                     <div class="form-group">
-                        <label>Dari</label>
+                        <label>From</label>
                         <select id="swap-from">
                             <option value="BTC">Bitcoin (BTC)</option>
                             <option value="ETH">Ethereum (ETH)</option>
@@ -1554,12 +2621,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Jumlah</label>
+                        <label>Amount</label>
                         <input type="number" placeholder="0.00" id="swap-amount" step="0.00000001">
                     </div>
-                    <div class="swap-icon">⇄</div>
+                    <div class="swap-icon"><i class="fas fa-exchange-alt"></i></div>
                     <div class="form-group">
-                        <label>Ke</label>
+                        <label>To</label>
                         <select id="swap-to">
                             <option value="USDT">Tether (USDT)</option>
                             <option value="BTC">Bitcoin (BTC)</option>
@@ -1567,23 +2634,23 @@
                             <option value="BNB">BNB (BNB)</option>
                         </select>
                     </div>
-                    <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                        <p style="font-size: 0.875rem; color: #64748b;">
-                            Estimasi: ~1.2 USDT<br>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8);">
+                            Estimated: ~1.2 USDT<br>
                             Fee: 0.1% (~0.001 BTC)
                         </p>
                     </div>
-                    <button onclick="swapCrypto()" class="swap-btn">Tukar Crypto</button>
+                    <button onclick="swapCrypto()" class="swap-btn"><i class="fas fa-exchange-alt"></i> Swap Crypto</button>
                 </div>
             `;
-            app.showModal('Tukar Crypto', content);
+            app.showModal('Swap Crypto', content);
         }
 
         function showBuy() {
             const content = `
                 <div class="buy-form">
                     <div class="form-group">
-                        <label>Pilih Crypto</label>
+                        <label>Select Crypto</label>
                         <select id="buy-crypto">
                             <option value="BTC">Bitcoin (BTC)</option>
                             <option value="ETH">Ethereum (ETH)</option>
@@ -1592,28 +2659,28 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Jumlah (IDR)</label>
+                        <label>Amount (USD)</label>
                         <input type="number" placeholder="100000" id="buy-amount" min="50000">
                     </div>
                     <div class="form-group">
-                        <label>Metode Pembayaran</label>
+                        <label>Payment Method</label>
                         <select id="payment-method">
-                            <option value="gopay">💳 GoPay</option>
-                            <option value="ovo">💳 OVO</option>
-                            <option value="dana">💳 DANA</option>
-                            <option value="bank">🏦 Transfer Bank</option>
+                            <option value="gopay"><i class="fas fa-credit-card"></i> GoPay</option>
+                            <option value="ovo"><i class="fas fa-credit-card"></i> OVO</option>
+                            <option value="dana"><i class="fas fa-credit-card"></i> DANA</option>
+                            <option value="bank"><i class="fas fa-university"></i> Bank Transfer</option>
                         </select>
                     </div>
-                    <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                        <p style="font-size: 0.875rem; color: #64748b;">
-                            Minimal pembelian: Rp 50,000<br>
-                            Fee transaksi: 1.5%
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8);">
+                            Minimum purchase: $50,000<br>
+                            Transaction fee: 1.5%
                         </p>
                     </div>
-                    <button onclick="buyCrypto()" class="buy-btn">Beli Crypto</button>
+                    <button onclick="buyCrypto()" class="buy-btn"><i class="fas fa-shopping-cart"></i> Buy Crypto</button>
                 </div>
             `;
-            app.showModal('Beli Crypto', content);
+            app.showModal('Buy Crypto', content);
         }
 
         function showAssetDetails(symbol) {
@@ -1624,37 +2691,36 @@
                 <div class="asset-details">
                     <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
                         <div class="asset-icon ${symbol.toLowerCase()}" style="margin-right: 1rem;">
-                            ${symbol === 'BTC' ? '₿' : symbol === 'ETH' ? 'Ξ' : symbol === 'BNB' ? 'B' : '₮'}
                         </div>
                         <div>
-                            <h3 style="margin: 0; font-size: 1.5rem;">${asset.name}</h3>
-                            <p style="margin: 0; color: #64748b;">${asset.amount} ${asset.symbol}</p>
+                            <h3 style="margin: 0; font-size: 1.5rem; color: white;">${asset.name}</h3>
+                            <p style="margin: 0; color: rgba(255,255,255,0.7);">${asset.amount} ${asset.symbol}</p>
                         </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div style="background: #f8fafc; padding: 1rem; border-radius: 8px;">
-                            <label style="display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem;">Harga</label>
-                            <div style="font-size: 1.25rem; font-weight: 600;">Rp ${asset.price.toLocaleString()}</div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                            <label style="display: block; font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 0.5rem;">Price</label>
+                            <div style="font-size: 1.25rem; font-weight: 600; color: white;">${asset.price.toLocaleString()}</div>
                         </div>
-                        <div style="background: #f8fafc; padding: 1rem; border-radius: 8px;">
-                            <label style="display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem;">Perubahan 24h</label>
+                        <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                            <label style="display: block; font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 0.5rem;">24h Change</label>
                             <div style="font-size: 1.25rem; font-weight: 600; color: ${asset.change >= 0 ? '#059669' : '#dc2626'};">
                                 ${asset.change >= 0 ? '+' : ''}${asset.change}%
                             </div>
                         </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-                        <button onclick="showSend()" style="padding: 0.75rem; background: #3b82f6; color: white; border: none; border-radius: 8px; cursor: pointer;">Kirim</button>
-                        <button onclick="showSwap()" style="padding: 0.75rem; background: #8b5cf6; color: white; border: none; border-radius: 8px; cursor: pointer;">Tukar</button>
-                        <button onclick="showBuy()" style="padding: 0.75rem; background: #f59e0b; color: white; border: none; border-radius: 8px; cursor: pointer;">Beli</button>
+                        <button onclick="showSend()" style="padding: 0.75rem; background: #20B2AA; color: white; border: none; border-radius: 8px; cursor: pointer;"><i class="fas fa-arrow-up"></i> Send</button>
+                        <button onclick="showSwap()" style="padding: 0.75rem; background: #8b5cf6; color: white; border: none; border-radius: 8px; cursor: pointer;"><i class="fas fa-exchange-alt"></i> Swap</button>
+                        <button onclick="showBuy()" style="padding: 0.75rem; background: #f59e0b; color: white; border: none; border-radius: 8px; cursor: pointer;"><i class="fas fa-shopping-cart"></i> Buy</button>
                     </div>
                 </div>
             `;
-            app.showModal(`${asset.name} Detail`, content);
+            app.showModal(`${asset.name} Details`, content);
         }
 
         function showTab(tab) {
-            app.showToast(`Navigasi ke ${tab}`, 'info');
+            app.showTab(tab);
             
             // Update active nav button
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
@@ -1664,12 +2730,195 @@
         }
 
         function copyAddress() {
-            const address = '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2';
+            const addressElement = document.getElementById('wallet-address');
+            const address = addressElement ? addressElement.textContent : '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2';
+            
             navigator.clipboard.writeText(address).then(() => {
-                app.showToast('Alamat telah disalin!', 'success');
+                app.showToast('Address copied successfully!', 'success');
+                
+                // Visual feedback
+                const button = event.target;
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                button.style.background = '#059669';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '#20B2AA';
+                }, 2000);
             }).catch(() => {
-                app.showToast('Gagal menyalin alamat', 'error');
+                app.showToast('Failed to copy address', 'error');
             });
+        }
+
+        function updateReceiveAddress() {
+            const crypto = document.getElementById('receive-crypto').value;
+            const addresses = {
+                'BTC': '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2',
+                'ETH': '0x742d35Cc6634C0532925a3b8D4Ad3C9F3D2ce662',
+                'BNB': 'bnb1grpf0955h0ykzq3ar5nmum7y6gdfl6lxfn46h2',
+                'USDT': '0x742d35Cc6634C0532925a3b8D4Ad3C9F3D2ce662'
+            };
+            
+            const cryptoNames = {
+                'BTC': 'Bitcoin',
+                'ETH': 'Ethereum',
+                'BNB': 'BNB',
+                'USDT': 'Tether'
+            };
+            
+            const addressElement = document.getElementById('wallet-address');
+            const cryptoNameElement = document.getElementById('crypto-name');
+            const warningCryptoElement = document.getElementById('warning-crypto');
+            
+            if (addressElement) addressElement.textContent = addresses[crypto];
+            if (cryptoNameElement) cryptoNameElement.textContent = cryptoNames[crypto];
+            if (warningCryptoElement) warningCryptoElement.textContent = `${cryptoNames[crypto]} (${crypto})`;
+            
+            // Update QR code
+            updateQRCode();
+        }
+
+        function updateQRCode() {
+            generateQRCode();
+        }
+
+        function generateQRCode() {
+            const canvas = document.getElementById('qr-canvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            const size = 200;
+            const blockSize = 10;
+            const blocks = size / blockSize;
+            
+            // Clear canvas
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Get current address and amount
+            const addressElement = document.getElementById('wallet-address');
+            const amountElement = document.getElementById('receive-amount');
+            const cryptoElement = document.getElementById('receive-crypto');
+            
+            const address = addressElement ? addressElement.textContent : '1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2';
+            const amount = amountElement ? amountElement.value : '';
+            const crypto = cryptoElement ? cryptoElement.value : 'BTC';
+            
+            // Create QR data (simplified pattern based on address)
+            const qrData = createQRPattern(address, amount, crypto);
+            
+            // Draw QR code pattern
+            ctx.fillStyle = 'black';
+            
+            // Draw finder patterns (corners)
+            drawFinderPattern(ctx, 0, 0, blockSize);
+            drawFinderPattern(ctx, size - 70, 0, blockSize);
+            drawFinderPattern(ctx, 0, size - 70, blockSize);
+            
+            // Draw data pattern
+            for (let i = 0; i < blocks; i++) {
+                for (let j = 0; j < blocks; j++) {
+                    // Skip finder pattern areas
+                    if (isFinderPatternArea(i, j, blocks)) continue;
+                    
+                    // Use hash of address + position to determine if block should be filled
+                    const hash = simpleHash(address + i + j + amount);
+                    if (hash % 2 === 0) {
+                        ctx.fillRect(i * blockSize, j * blockSize, blockSize, blockSize);
+                    }
+                }
+            }
+            
+            // Add timing patterns
+            drawTimingPattern(ctx, blockSize, blocks);
+            
+            // Add KONG logo in center (optional)
+            drawCenterLogo(ctx, size);
+        }
+
+        function createQRPattern(address, amount, crypto) {
+            // Create a URI format for the QR code
+            let qrString = '';
+            if (crypto === 'BTC') {
+                qrString = `bitcoin:${address}`;
+            } else if (crypto === 'ETH' || crypto === 'USDT') {
+                qrString = `ethereum:${address}`;
+            } else if (crypto === 'BNB') {
+                qrString = `bnb:${address}`;
+            }
+            
+            if (amount && parseFloat(amount) > 0) {
+                qrString += `?amount=${amount}`;
+            }
+            
+            return qrString;
+        }
+
+        function drawFinderPattern(ctx, x, y, blockSize) {
+            // Outer square (7x7)
+            ctx.fillRect(x, y, blockSize * 7, blockSize * 7);
+            
+            // Inner white square (5x5)
+            ctx.fillStyle = 'white';
+            ctx.fillRect(x + blockSize, y + blockSize, blockSize * 5, blockSize * 5);
+            
+            // Inner black square (3x3)
+            ctx.fillStyle = 'black';
+            ctx.fillRect(x + blockSize * 2, y + blockSize * 2, blockSize * 3, blockSize * 3);
+        }
+
+        function drawTimingPattern(ctx, blockSize, blocks) {
+            // Horizontal timing pattern
+            for (let i = 8; i < blocks - 8; i++) {
+                if (i % 2 === 0) {
+                    ctx.fillRect(i * blockSize, 6 * blockSize, blockSize, blockSize);
+                }
+            }
+            
+            // Vertical timing pattern
+            for (let j = 8; j < blocks - 8; j++) {
+                if (j % 2 === 0) {
+                    ctx.fillRect(6 * blockSize, j * blockSize, blockSize, blockSize);
+                }
+            }
+        }
+
+        function drawCenterLogo(ctx, size) {
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const logoSize = 30;
+            
+            // Draw white background for logo
+            ctx.fillStyle = 'white';
+            ctx.fillRect(centerX - logoSize/2, centerY - logoSize/2, logoSize, logoSize);
+            
+            // Draw KONG text
+            ctx.fillStyle = '#20B2AA';
+            ctx.font = 'bold 8px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('KONG', centerX, centerY + 3);
+        }
+
+        function isFinderPatternArea(i, j, blocks) {
+            // Top-left
+            if (i < 9 && j < 9) return true;
+            // Top-right
+            if (i >= blocks - 8 && j < 9) return true;
+            // Bottom-left
+            if (i < 9 && j >= blocks - 8) return true;
+            
+            return false;
+        }
+
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Convert to 32-bit integer
+            }
+            return Math.abs(hash);
         }
 
         function sendCrypto() {
@@ -1678,12 +2927,22 @@
             const crypto = document.getElementById('send-crypto').value;
             
             if (!address || !amount) {
-                app.showToast('Mohon lengkapi semua field', 'error');
+                app.showToast('Please complete all fields', 'error');
                 return;
             }
             
-            app.showToast(`Berhasil mengirim ${amount} ${crypto}!`, 'success');
-            app.closeModal();
+            const btn = event.target;
+            btn.innerHTML = '<div class="spinner"></div>';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Transaction Successful!';
+                btn.style.background = 'linear-gradient(45deg, #4CAF50, #66BB6A)';
+                
+                setTimeout(() => {
+                    app.showToast(`Successfully sent ${amount} ${crypto}!`, 'success');
+                    app.closeModal();
+                }, 1500);
+            }, 2000);
         }
 
         function swapCrypto() {
@@ -1692,12 +2951,22 @@
             const amount = document.getElementById('swap-amount').value;
             
             if (!amount) {
-                app.showToast('Mohon masukkan jumlah', 'error');
+                app.showToast('Please enter amount', 'error');
                 return;
             }
             
-            app.showToast(`Berhasil menukar ${amount} ${fromCrypto} ke ${toCrypto}!`, 'success');
-            app.closeModal();
+            const btn = event.target;
+            btn.innerHTML = '<div class="spinner"></div>';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Swap Successful!';
+                btn.style.background = 'linear-gradient(45deg, #4CAF50, #66BB6A)';
+                
+                setTimeout(() => {
+                    app.showToast(`Successfully swapped ${amount} ${fromCrypto} to ${toCrypto}!`, 'success');
+                    app.closeModal();
+                }, 1500);
+            }, 2000);
         }
 
         function buyCrypto() {
@@ -1706,12 +2975,22 @@
             const payment = document.getElementById('payment-method').value;
             
             if (!amount || parseInt(amount) < 50000) {
-                app.showToast('Minimal pembelian Rp 50,000', 'error');
+                app.showToast('Minimum purchase $50,000', 'error');
                 return;
             }
             
-            app.showToast(`Berhasil membeli ${crypto} senilai Rp ${parseInt(amount).toLocaleString()}!`, 'success');
-            app.closeModal();
+            const btn = event.target;
+            btn.innerHTML = '<div class="spinner"></div>';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Purchase Successful!';
+                btn.style.background = 'linear-gradient(45deg, #4CAF50, #66BB6A)';
+                
+                setTimeout(() => {
+                    app.showToast(`Successfully purchased ${crypto} worth ${parseInt(amount).toLocaleString()}!`, 'success');
+                    app.closeModal();
+                }, 1500);
+            }, 2000);
         }
 
         function closeModal() {
@@ -1722,25 +3001,152 @@
             app.showToast(message, type);
         }
 
+        // Crypto Logo Manager
+        class CryptoLogoManager {
+            constructor() {
+                this.logoSources = {
+                    BTC: [
+                        'https://cryptologos.cc/logos/bitcoin-btc-logo.svg',
+                        'https://assets.coingecko.com/coins/images/1/large/bitcoin.png',
+                        'https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color/btc.svg'
+                    ],
+                    ETH: [
+                        'https://cryptologos.cc/logos/ethereum-eth-logo.svg',
+                        'https://assets.coingecko.com/coins/images/279/large/ethereum.png',
+                        'https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color/eth.svg'
+                    ],
+                    BNB: [
+                        'https://cryptologos.cc/logos/binance-coin-bnb-logo.svg',
+                        'https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png',
+                        'https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color/bnb.svg'
+                    ],
+                    USDT: [
+                        'https://cryptologos.cc/logos/tether-usdt-logo.svg',
+                        'https://assets.coingecko.com/coins/images/325/large/Tether.png',
+                        'https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color/usdt.svg'
+                    ]
+                };
+                this.loadedLogos = {};
+                this.init();
+            }
+
+            init() {
+                this.loadAllLogos();
+            }
+
+            async loadAllLogos() {
+                for (const [crypto, sources] of Object.entries(this.logoSources)) {
+                    await this.loadLogo(crypto, sources);
+                }
+                this.applyLogos();
+            }
+
+            async loadLogo(crypto, sources) {
+                for (const source of sources) {
+                    try {
+                        const success = await this.testImageLoad(source);
+                        if (success) {
+                            this.loadedLogos[crypto] = source;
+                            break;
+                        }
+                    } catch (error) {
+                        console.log(`Failed to load ${crypto} logo from ${source}`);
+                    }
+                }
+            }
+
+            testImageLoad(src) {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(true);
+                    img.onerror = () => resolve(false);
+                    img.src = src;
+                    // Timeout after 3 seconds
+                    setTimeout(() => resolve(false), 3000);
+                });
+            }
+
+            applyLogos() {
+                const cryptoIcons = document.querySelectorAll('.asset-icon');
+                cryptoIcons.forEach(icon => {
+                    const crypto = this.getCryptoFromClass(icon);
+                    if (crypto && this.loadedLogos[crypto]) {
+                        // Clear the text content
+                        icon.style.setProperty('--bg-image', `url(${this.loadedLogos[crypto]})`);
+                        icon.style.backgroundImage = `var(--bg-image)`;
+                        icon.style.backgroundSize = '24px 24px';
+                        icon.style.backgroundRepeat = 'no-repeat';
+                        icon.style.backgroundPosition = 'center';
+                        
+                        // Hide the text symbol
+                        if (icon.style.setProperty) {
+                            icon.style.setProperty('font-size', '0');
+                        }
+                    }
+                });
+            }
+
+            getCryptoFromClass(element) {
+                const classes = element.className.split(' ');
+                for (const cls of classes) {
+                    if (['btc', 'eth', 'bnb', 'usdt'].includes(cls)) {
+                        return cls.toUpperCase();
+                    }
+                }
+                return null;
+            }
+
+            // Public method to refresh logos
+            refreshLogos() {
+                setTimeout(() => this.applyLogos(), 100);
+            }
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             app = new KongWalletApp();
+            
+            // Initialize logo manager
+            window.logoManager = new CryptoLogoManager();
+            
+            // Refresh logos when modals open
+            const originalShowModal = app.showModal;
+            app.showModal = function(title, content) {
+                originalShowModal.call(this, title, content);
+                setTimeout(() => window.logoManager.refreshLogos(), 200);
+            };
         });
+
+        // Make functions globally available
+        window.loginWithPIN = loginWithPIN;
+        window.loginWithBiometric = loginWithBiometric;
+        window.logout = logout;
+        window.showReceive = showReceive;
+        window.showSend = showSend;
+        window.showSwap = showSwap;
+        window.showBuy = showBuy;
+        window.showAssetDetails = showAssetDetails;
+        window.showTab = showTab;
+        window.copyAddress = copyAddress;
+        window.sendCrypto = sendCrypto;
+        window.swapCrypto = swapCrypto;
+        window.buyCrypto = buyCrypto;
+        window.closeModal = closeModal;
+        window.showToast = showToast;
 
         // Prevent dev tools
         document.addEventListener('keydown', function(e) {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
                 e.preventDefault();
-                showToast('Developer tools dinonaktifkan untuk keamanan', 'error');
+                showToast('Developer tools disabled for security', 'error');
             }
         });
 
         // Prevent right click
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
-            showToast('Right click dinonaktifkan untuk keamanan', 'error');
+            showToast('Right click disabled for security', 'error');
         });
     </script>
 </body>
 </html>
-
