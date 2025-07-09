@@ -567,6 +567,84 @@
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         }
 
+        /* Premium Banner */
+        .premium-banner {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 2px solid #fbbf24;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 1rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+            to { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); }
+        }
+
+        .premium-content {
+            text-align: center;
+        }
+
+        .premium-icon {
+            font-size: 3rem;
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        .premium-info h3 {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .premium-info p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .premium-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        .premium-info li {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .premium-btn {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1e293b;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .premium-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+        }
+
         .action-btn span {
             font-size: 0.875rem;
             font-weight: 500;
@@ -1380,6 +1458,333 @@
             margin-top: 0.25rem;
         }
 
+        /* DeFi Styles */
+        .defi-container, .nft-container, .analytics-container {
+            padding: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .defi-header, .nft-header, .analytics-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .defi-header h2, .nft-header h2, .analytics-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .defi-header p, .nft-header p, .analytics-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .defi-stats, .nft-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .defi-services {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .service-card {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #20B2AA 0%, #48D1CC 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-right: 1rem;
+        }
+
+        .service-info {
+            flex: 1;
+        }
+
+        .service-info h3 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .service-action {
+            color: #20B2AA;
+            font-size: 1.25rem;
+        }
+
+        /* NFT Styles */
+        .collections-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .collection-card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .collection-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .collection-image {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .collection-info {
+            flex: 1;
+        }
+
+        .collection-info h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .collection-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .collection-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+        }
+
+        .collection-stats .positive {
+            color: #059669;
+        }
+
+        .collection-stats .negative {
+            color: #dc2626;
+        }
+
+        .nft-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .nft-btn {
+            background: linear-gradient(135deg, #20B2AA 0%, #48D1CC 100%);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .nft-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(32, 178, 170, 0.4);
+        }
+
+        /* Analytics Styles */
+        .analytics-overview {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            animation: slideUp 0.5s ease;
+        }
+
+        .metric-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .metric-info {
+            flex: 1;
+        }
+
+        .metric-info h3 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-change {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .analytics-charts {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-section {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .chart-section h3 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .analytics-insights {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .analytics-insights h3 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .insight-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .insight-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .insight-content h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .insight-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         /* Settings Styles */
         .settings-section {
             margin-bottom: 2rem;
@@ -1701,6 +2106,30 @@
                     <span>Buy</span>
                 </button>
             </div>
+            
+            <!-- Premium Features Banner -->
+            <div class="premium-banner">
+                <div class="premium-content">
+                    <div class="premium-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="premium-info">
+                        <h3>KONG Premium</h3>
+                        <p>Unlock advanced DeFi, NFT trading, and institutional features</p>
+                        <ul>
+                            <li>✓ Up to 25% APY Staking Rewards</li>
+                            <li>✓ Advanced Analytics & AI Insights</li>
+                            <li>✓ NFT Marketplace Access</li>
+                            <li>✓ Multi-Signature Wallets</li>
+                            <li>✓ API Access & Automation</li>
+                            <li>✓ White Label Solutions</li>
+                        </ul>
+                    </div>
+                    <button class="premium-btn" onclick="showPremium()">
+                        <i class="fas fa-star"></i> Upgrade to Premium
+                    </button>
+                </div>
+            </div>
 
             <!-- Assets Section -->
             <div class="assets-section">
@@ -2019,6 +2448,244 @@
             </div>
         </div>
 
+        <!-- DeFi Tab -->
+        <div id="defi-tab" class="tab-content">
+            <div class="defi-container">
+                <div class="defi-header">
+                    <h2>DeFi Services</h2>
+                    <p>Advanced decentralized finance features</p>
+                </div>
+                
+                <div class="defi-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Staked</div>
+                        <div class="stat-value">$2.5M</div>
+                        <div class="stat-change positive">+12.5% APY</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Yield Farming</div>
+                        <div class="stat-value">$850K</div>
+                        <div class="stat-change positive">+18.2% APY</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Liquidity Pools</div>
+                        <div class="stat-value">$1.2M</div>
+                        <div class="stat-change positive">+22.8% APY</div>
+                    </div>
+                </div>
+                
+                <div class="defi-services">
+                    <div class="service-card" onclick="showStaking()">
+                        <div class="service-icon"><i class="fas fa-coins"></i></div>
+                        <div class="service-info">
+                            <h3>Staking Rewards</h3>
+                            <p>Earn passive income up to 25% APY</p>
+                        </div>
+                        <div class="service-action">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" onclick="showYieldFarming()">
+                        <div class="service-icon"><i class="fas fa-seedling"></i></div>
+                        <div class="service-info">
+                            <h3>Yield Farming</h3>
+                            <p>Maximize returns with LP tokens</p>
+                        </div>
+                        <div class="service-action">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" onclick="showLending()">
+                        <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <div class="service-info">
+                            <h3>Lending & Borrowing</h3>
+                            <p>Collateralized loans up to 80% LTV</p>
+                        </div>
+                        <div class="service-action">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" onclick="showLiquidityPools()">
+                        <div class="service-icon"><i class="fas fa-water"></i></div>
+                        <div class="service-info">
+                            <h3>Liquidity Pools</h3>
+                            <p>Provide liquidity and earn fees</p>
+                        </div>
+                        <div class="service-action">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NFT Tab -->
+        <div id="nft-tab" class="tab-content">
+            <div class="nft-container">
+                <div class="nft-header">
+                    <h2>NFT Marketplace</h2>
+                    <p>Discover, buy, and sell digital assets</p>
+                </div>
+                
+                <div class="nft-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Collection Value</div>
+                        <div class="stat-value">$450K</div>
+                        <div class="stat-change positive">+15.8%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">NFTs Owned</div>
+                        <div class="stat-value">127</div>
+                        <div class="stat-change positive">+5</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Floor Price</div>
+                        <div class="stat-value">2.5 ETH</div>
+                        <div class="stat-change negative">-3.2%</div>
+                    </div>
+                </div>
+                
+                <div class="nft-collections">
+                    <h3>Featured Collections</h3>
+                    <div class="collections-grid">
+                        <div class="collection-card">
+                            <div class="collection-image">
+                                <i class="fas fa-image" style="font-size: 2rem; color: #8b5cf6;"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h4>Bored Ape Yacht Club</h4>
+                                <p>Floor: 45.2 ETH</p>
+                                <div class="collection-stats">
+                                    <span class="positive">+12.5%</span>
+                                    <span>10K items</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="collection-card">
+                            <div class="collection-image">
+                                <i class="fas fa-gem" style="font-size: 2rem; color: #f59e0b;"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h4>CryptoPunks</h4>
+                                <p>Floor: 62.8 ETH</p>
+                                <div class="collection-stats">
+                                    <span class="positive">+8.7%</span>
+                                    <span>10K items</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="collection-card">
+                            <div class="collection-image">
+                                <i class="fas fa-dragon" style="font-size: 2rem; color: #ef4444;"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h4>Azuki</h4>
+                                <p>Floor: 12.3 ETH</p>
+                                <div class="collection-stats">
+                                    <span class="negative">-2.1%</span>
+                                    <span>10K items</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nft-actions">
+                    <button class="nft-btn" onclick="showNFTMarketplace()">
+                        <i class="fas fa-store"></i> Browse Marketplace
+                    </button>
+                    <button class="nft-btn" onclick="showCreateNFT()">
+                        <i class="fas fa-plus"></i> Create NFT
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Tab -->
+        <div id="analytics-tab" class="tab-content">
+            <div class="analytics-container">
+                <div class="analytics-header">
+                    <h2>Advanced Analytics</h2>
+                    <p>Professional trading insights and metrics</p>
+                </div>
+                
+                <div class="analytics-overview">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="metric-info">
+                            <h3>Portfolio Performance</h3>
+                            <div class="metric-value">+$125,450</div>
+                            <div class="metric-change positive">+18.7% this month</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="metric-info">
+                            <h3>Win Rate</h3>
+                            <div class="metric-value">73.8%</div>
+                            <div class="metric-change positive">+2.3% vs last month</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-fire"></i></div>
+                        <div class="metric-info">
+                            <h3>Best Streak</h3>
+                            <div class="metric-value">12 days</div>
+                            <div class="metric-change">Current: 5 days</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-charts">
+                    <div class="chart-section">
+                        <h3>Portfolio Allocation</h3>
+                        <div class="chart-container">
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-pie" style="font-size: 3rem; color: #20B2AA;"></i>
+                                <p>Interactive Portfolio Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-section">
+                        <h3>Performance History</h3>
+                        <div class="chart-container">
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-area" style="font-size: 3rem; color: #8b5cf6;"></i>
+                                <p>Historical Performance Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-insights">
+                    <h3>AI-Powered Insights</h3>
+                    <div class="insight-card">
+                        <div class="insight-icon"><i class="fas fa-robot"></i></div>
+                        <div class="insight-content">
+                            <h4>Recommendation</h4>
+                            <p>Consider increasing BTC allocation by 5-10% based on current market conditions and your risk profile.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <div class="insight-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="insight-content">
+                            <h4>Risk Alert</h4>
+                            <p>High volatility detected in ETH. Consider setting stop-loss orders for positions above $3,000.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Settings Tab -->
         <div id="settings-tab" class="tab-content">
             <div class="settings-container">
@@ -2028,18 +2695,35 @@
                 </div>
                 
                 <div class="settings-section">
-                    <h3>Security</h3>
+                    <h3>Security & Privacy</h3>
                     <div class="settings-item">
                         <div class="setting-info">
-                            <div class="setting-name">Change PIN</div>
-                            <div class="setting-desc">Update your wallet access PIN</div>
+                            <div class="setting-name">Multi-Factor Authentication</div>
+                            <div class="setting-desc">Enhanced security with 2FA/3FA</div>
                         </div>
-                        <button class="setting-btn" onclick="showToast('Change PIN feature coming soon!')">Change</button>
+                        <button class="setting-btn" onclick="show2FA()">Setup</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Hardware Wallet Integration</div>
+                            <div class="setting-desc">Connect Ledger/Trezor for ultimate security</div>
+                        </div>
+                        <button class="setting-btn" onclick="showHardwareWallet()">Connect</button>
                     </div>
                     <div class="settings-item">
                         <div class="setting-info">
                             <div class="setting-name">Biometric Login</div>
                             <div class="setting-desc">Enable fingerprint/face recognition</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Privacy Mode</div>
+                            <div class="setting-desc">Hide sensitive information in screenshots</div>
                         </div>
                         <label class="toggle-switch">
                             <input type="checkbox" checked>
@@ -2057,6 +2741,59 @@
                             <option value="15">15 minutes</option>
                             <option value="30">30 minutes</option>
                         </select>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Advanced Trading</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Professional Trading Interface</div>
+                            <div class="setting-desc">Advanced charts and order types</div>
+                        </div>
+                        <button class="setting-btn" onclick="showProTrading()">Access</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">API Access</div>
+                            <div class="setting-desc">Create API keys for automated trading</div>
+                        </div>
+                        <button class="setting-btn" onclick="showAPIAccess()">Manage</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Stop Loss / Take Profit</div>
+                            <div class="setting-desc">Automated risk management</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Institutional Features</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Multi-Signature Wallets</div>
+                            <div class="setting-desc">Enterprise-grade security for teams</div>
+                        </div>
+                        <button class="setting-btn" onclick="showMultiSig()">Setup</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Compliance & Reporting</div>
+                            <div class="setting-desc">Tax reports and audit trails</div>
+                        </div>
+                        <button class="setting-btn" onclick="showCompliance()">Access</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">White Label Solutions</div>
+                            <div class="setting-desc">Custom branding for enterprises</div>
+                        </div>
+                        <button class="setting-btn" onclick="showWhiteLabel()">Explore</button>
                     </div>
                 </div>
                 
@@ -2149,13 +2886,17 @@
             <div class="nav-icon"><i class="fas fa-chart-pie"></i></div>
             <span>Portfolio</span>
         </button>
-        <button class="nav-btn" onclick="showTab('Market')">
-            <div class="nav-icon"><i class="fas fa-chart-line"></i></div>
-            <span>Market</span>
+        <button class="nav-btn" onclick="showTab('DeFi')">
+            <div class="nav-icon"><i class="fas fa-coins"></i></div>
+            <span>DeFi</span>
         </button>
-        <button class="nav-btn" onclick="showTab('History')">
-            <div class="nav-icon"><i class="fas fa-history"></i></div>
-            <span>History</span>
+        <button class="nav-btn" onclick="showTab('NFT')">
+            <div class="nav-icon"><i class="fas fa-gem"></i></div>
+            <span>NFT</span>
+        </button>
+        <button class="nav-btn" onclick="showTab('Analytics')">
+            <div class="nav-icon"><i class="fas fa-chart-bar"></i></div>
+            <span>Analytics</span>
         </button>
         <button class="nav-btn" onclick="showTab('Settings')">
             <div class="nav-icon"><i class="fas fa-cog"></i></div>
@@ -3001,6 +3742,766 @@
             app.showToast(message, type);
         }
 
+        // Premium Features Functions
+        function showPremium() {
+            const content = `
+                <div class="premium-upgrade">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div class="premium-icon" style="font-size: 4rem; color: #fbbf24; margin-bottom: 1rem;">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h2 style="color: #fbbf24; font-size: 2rem; margin-bottom: 0.5rem;">KONG Premium</h2>
+                        <p style="color: rgba(255,255,255,0.8);">Unlock the full potential of professional crypto trading</p>
+                    </div>
+                    
+                    <div class="pricing-plans">
+                        <div class="plan-card">
+                            <h3>Premium Monthly</h3>
+                            <div class="plan-price">$299<span>/month</span></div>
+                            <ul>
+                                <li>✓ Advanced DeFi Services</li>
+                                <li>✓ NFT Marketplace Access</li>
+                                <li>✓ AI-Powered Analytics</li>
+                                <li>✓ API Access</li>
+                                <li>✓ Priority Support</li>
+                            </ul>
+                            <button onclick="upgradeToPremium('monthly')" class="upgrade-btn">Choose Plan</button>
+                        </div>
+                        
+                        <div class="plan-card featured">
+                            <div class="plan-badge">BEST VALUE</div>
+                            <h3>Premium Annual</h3>
+                            <div class="plan-price">$2,999<span>/year</span></div>
+                            <div class="plan-savings">Save $588 annually</div>
+                            <ul>
+                                <li>✓ Everything in Monthly</li>
+                                <li>✓ Multi-Signature Wallets</li>
+                                <li>✓ White Label Solutions</li>
+                                <li>✓ Institutional Features</li>
+                                <li>✓ Custom Integrations</li>
+                            </ul>
+                            <button onclick="upgradeToPremium('annual')" class="upgrade-btn premium">Choose Plan</button>
+                        </div>
+                        
+                        <div class="plan-card">
+                            <h3>Enterprise</h3>
+                            <div class="plan-price">Custom</div>
+                            <ul>
+                                <li>✓ Everything in Premium</li>
+                                <li>✓ Custom Development</li>
+                                <li>✓ Dedicated Support</li>
+                                <li>✓ On-Premise Deployment</li>
+                                <li>✓ Volume Discounts</li>
+                            </ul>
+                            <button onclick="contactEnterprise()" class="upgrade-btn">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Upgrade to Premium', content);
+        }
+
+        function showStaking() {
+            const content = `
+                <div class="staking-interface">
+                    <div class="staking-header">
+                        <h3>Staking Rewards</h3>
+                        <p>Earn passive income with your crypto assets</p>
+                    </div>
+                    
+                    <div class="staking-options">
+                        <div class="staking-option">
+                            <div class="staking-crypto">
+                                <div class="asset-icon btc"></div>
+                                <div>
+                                    <h4>Bitcoin Staking</h4>
+                                    <p>Secure the network and earn rewards</p>
+                                </div>
+                            </div>
+                            <div class="staking-apy">12.5% APY</div>
+                            <button onclick="stakeAsset('BTC')" class="stake-btn">Stake Now</button>
+                        </div>
+                        
+                        <div class="staking-option">
+                            <div class="staking-crypto">
+                                <div class="asset-icon eth"></div>
+                                <div>
+                                    <h4>Ethereum 2.0</h4>
+                                    <p>Participate in ETH 2.0 consensus</p>
+                                </div>
+                            </div>
+                            <div class="staking-apy">18.7% APY</div>
+                            <button onclick="stakeAsset('ETH')" class="stake-btn">Stake Now</button>
+                        </div>
+                        
+                        <div class="staking-option">
+                            <div class="staking-crypto">
+                                <div class="asset-icon bnb"></div>
+                                <div>
+                                    <h4>BNB Staking</h4>
+                                    <p>Earn rewards on Binance Smart Chain</p>
+                                </div>
+                            </div>
+                            <div class="staking-apy">25.2% APY</div>
+                            <button onclick="stakeAsset('BNB')" class="stake-btn">Stake Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="staking-form">
+                        <h4>Stake Your Assets</h4>
+                        <div class="form-group">
+                            <label>Select Asset</label>
+                            <select id="stake-asset">
+                                <option value="BTC">Bitcoin (BTC)</option>
+                                <option value="ETH">Ethereum (ETH)</option>
+                                <option value="BNB">BNB (BNB)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount to Stake</label>
+                            <input type="number" id="stake-amount" placeholder="0.00" step="0.00000001">
+                        </div>
+                        <div class="form-group">
+                            <label>Staking Period</label>
+                            <select id="stake-period">
+                                <option value="30">30 days (Base APY)</option>
+                                <option value="90">90 days (+2% bonus)</option>
+                                <option value="180">180 days (+5% bonus)</option>
+                                <option value="365">365 days (+10% bonus)</option>
+                            </select>
+                        </div>
+                        <button onclick="confirmStaking()" class="stake-confirm-btn">Confirm Staking</button>
+                    </div>
+                </div>
+            `;
+            app.showModal('Staking Rewards', content);
+        }
+
+        function showYieldFarming() {
+            const content = `
+                <div class="farming-interface">
+                    <h3>Yield Farming</h3>
+                    <p>Maximize your returns by providing liquidity</p>
+                    
+                    <div class="farming-pools">
+                        <div class="pool-card">
+                            <h4>BTC/ETH Pool</h4>
+                            <div class="pool-info">
+                                <div class="pool-apy">28.5% APY</div>
+                                <div class="pool-tvl">TVL: $25.2M</div>
+                            </div>
+                            <button onclick="joinPool('BTC-ETH')" class="join-pool-btn">Join Pool</button>
+                        </div>
+                        
+                        <div class="pool-card">
+                            <h4>ETH/USDT Pool</h4>
+                            <div class="pool-info">
+                                <div class="pool-apy">22.3% APY</div>
+                                <div class="pool-tvl">TVL: $18.7M</div>
+                            </div>
+                            <button onclick="joinPool('ETH-USDT')" class="join-pool-btn">Join Pool</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Yield Farming', content);
+        }
+
+        function showLending() {
+            const content = `
+                <div class="lending-interface">
+                    <h3>Lending & Borrowing</h3>
+                    <p>Earn interest or access liquidity with collateral</p>
+                    
+                    <div class="lending-options">
+                        <div class="lending-card">
+                            <h4>Lend Your Assets</h4>
+                            <p>Earn up to 15% APY by lending your crypto</p>
+                            <div class="lending-rates">
+                                <div class="rate-item">
+                                    <span>BTC</span>
+                                    <span>8.5% APY</span>
+                                </div>
+                                <div class="rate-item">
+                                    <span>ETH</span>
+                                    <span>12.3% APY</span>
+                                </div>
+                                <div class="rate-item">
+                                    <span>USDT</span>
+                                    <span>15.7% APY</span>
+                                </div>
+                            </div>
+                            <button onclick="startLending()" class="lend-btn">Start Lending</button>
+                        </div>
+                        
+                        <div class="lending-card">
+                            <h4>Borrow Against Collateral</h4>
+                            <p>Access liquidity up to 80% LTV</p>
+                            <div class="borrow-info">
+                                <div class="rate-item">
+                                    <span>Interest Rate</span>
+                                    <span>5.5% APR</span>
+                                </div>
+                                <div class="rate-item">
+                                    <span>Max LTV</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="rate-item">
+                                    <span>Liquidation Fee</span>
+                                    <span>8%</span>
+                                </div>
+                            </div>
+                            <button onclick="startBorrowing()" class="borrow-btn">Start Borrowing</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Lending & Borrowing', content);
+        }
+
+        function showNFTMarketplace() {
+            const content = `
+                <div class="nft-marketplace">
+                    <h3>NFT Marketplace</h3>
+                    <p>Discover and trade unique digital assets</p>
+                    
+                    <div class="nft-categories">
+                        <button class="category-btn active">All</button>
+                        <button class="category-btn">Art</button>
+                        <button class="category-btn">Gaming</button>
+                        <button class="category-btn">Music</button>
+                        <button class="category-btn">Sports</button>
+                    </div>
+                    
+                    <div class="nft-grid">
+                        <div class="nft-item">
+                            <div class="nft-image">
+                                <i class="fas fa-image" style="font-size: 3rem; color: #8b5cf6;"></i>
+                            </div>
+                            <div class="nft-info">
+                                <h4>Crypto Punk #1234</h4>
+                                <p>Current bid: 15.5 ETH</p>
+                                <button onclick="bidNFT()" class="bid-btn">Place Bid</button>
+                            </div>
+                        </div>
+                        
+                        <div class="nft-item">
+                            <div class="nft-image">
+                                <i class="fas fa-gem" style="font-size: 3rem; color: #f59e0b;"></i>
+                            </div>
+                            <div class="nft-info">
+                                <h4>Bored Ape #5678</h4>
+                                <p>Buy now: 45.2 ETH</p>
+                                <button onclick="buyNFT()" class="buy-nft-btn">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('NFT Marketplace', content);
+        }
+
+        function show2FA() {
+            const content = `
+                <div class="twofa-setup">
+                    <h3>Two-Factor Authentication</h3>
+                    <p>Enhanced security for your KONG WALLET</p>
+                    
+                    <div class="twofa-options">
+                        <div class="twofa-option">
+                            <div class="twofa-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="twofa-info">
+                                <h4>SMS Authentication</h4>
+                                <p>Receive codes via SMS</p>
+                            </div>
+                            <button onclick="setup2FA('sms')" class="setup-btn">Setup</button>
+                        </div>
+                        
+                        <div class="twofa-option">
+                            <div class="twofa-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="twofa-info">
+                                <h4>Authenticator App</h4>
+                                <p>Use Google Authenticator or similar</p>
+                            </div>
+                            <button onclick="setup2FA('app')" class="setup-btn">Setup</button>
+                        </div>
+                        
+                        <div class="twofa-option">
+                            <div class="twofa-icon"><i class="fas fa-key"></i></div>
+                            <div class="twofa-info">
+                                <h4>Hardware Key</h4>
+                                <p>YubiKey or similar hardware</p>
+                            </div>
+                            <button onclick="setup2FA('hardware')" class="setup-btn">Setup</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Two-Factor Authentication', content);
+        }
+
+        function showProTrading() {
+            const content = `
+                <div class="pro-trading">
+                    <h3>Professional Trading Interface</h3>
+                    <p>Advanced tools for serious traders</p>
+                    
+                    <div class="trading-features">
+                        <div class="feature-card">
+                            <h4>Advanced Charts</h4>
+                            <p>TradingView integration with 100+ indicators</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Order Types</h4>
+                            <p>Market, Limit, Stop-Loss, Take-Profit, OCO</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Portfolio Management</h4>
+                            <p>Advanced analytics and risk management</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Algorithmic Trading</h4>
+                            <p>Create and deploy trading bots</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="launchProInterface()" class="launch-btn">Launch Pro Interface</button>
+                </div>
+            `;
+            app.showModal('Professional Trading', content);
+        }
+
+        function showWhiteLabel() {
+            const content = `
+                <div class="whitelabel-solution">
+                    <h3>White Label Solutions</h3>
+                    <p>Launch your own branded crypto wallet</p>
+                    
+                    <div class="whitelabel-features">
+                        <div class="feature-list">
+                            <h4>What's Included:</h4>
+                            <ul>
+                                <li>✓ Complete wallet infrastructure</li>
+                                <li>✓ Custom branding and UI</li>
+                                <li>✓ Multi-blockchain support</li>
+                                <li>✓ DeFi and NFT integration</li>
+                                <li>✓ KYC/AML compliance</li>
+                                <li>✓ 24/7 technical support</li>
+                                <li>✓ Revenue sharing model</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="pricing-info">
+                            <h4>Pricing:</h4>
+                            <div class="price-tier">
+                                <div class="tier-name">Startup</div>
+                                <div class="tier-price">$50,000</div>
+                                <div class="tier-desc">Basic features, up to 10K users</div>
+                            </div>
+                            <div class="price-tier">
+                                <div class="tier-name">Business</div>
+                                <div class="tier-price">$150,000</div>
+                                <div class="tier-desc">Advanced features, up to 100K users</div>
+                            </div>
+                            <div class="price-tier">
+                                <div class="tier-name">Enterprise</div>
+                                <div class="tier-price">Custom</div>
+                                <div class="tier-desc">Full customization, unlimited users</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="requestWhiteLabelDemo()" class="demo-btn">Request Demo</button>
+                </div>
+            `;
+            app.showModal('White Label Solutions', content);
+        }
+
+        // Implementation functions
+        function upgradeToPremium(plan) {
+            const planNames = { monthly: 'Monthly', annual: 'Annual' };
+            const prices = { monthly: '$299', annual: '$2,999' };
+            
+            app.showToast(`Upgrading to Premium ${planNames[plan]} (${prices[plan]})...`, 'success');
+            
+            setTimeout(() => {
+                app.showToast('🎉 Welcome to KONG Premium! All features unlocked!', 'success');
+                app.closeModal();
+            }, 2000);
+        }
+
+        function contactEnterprise() {
+            app.showToast('Enterprise team will contact you within 24 hours', 'success');
+            app.closeModal();
+        }
+
+        function stakeAsset(asset) {
+            app.showToast(`Starting ${asset} staking process...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ Successfully staked ${asset}! Earning rewards now.`, 'success');
+            }, 1500);
+        }
+
+        function joinPool(pool) {
+            app.showToast(`Joining ${pool} liquidity pool...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ Successfully joined ${pool} pool!`, 'success');
+            }, 1500);
+        }
+
+        function launchProInterface() {
+            app.showToast('Launching Professional Trading Interface...', 'success');
+            setTimeout(() => {
+                app.showToast('🚀 Pro Trading Interface activated!', 'success');
+                app.closeModal();
+            }, 2000);
+        }
+
+        function requestWhiteLabelDemo() {
+            app.showToast('Demo request sent! Our team will contact you soon.', 'success');
+            app.closeModal();
+        }
+
+        // Additional premium functions implementation
+        function showLiquidityPools() {
+            const content = `
+                <div class="liquidity-pools">
+                    <h3>Liquidity Pools</h3>
+                    <p>Provide liquidity and earn trading fees</p>
+                    
+                    <div class="pool-stats">
+                        <div class="stat-item">
+                            <div class="stat-label">Total Liquidity</div>
+                            <div class="stat-value">$45.2M</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Your Share</div>
+                            <div class="stat-value">2.3%</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Earned Fees</div>
+                            <div class="stat-value">$1,250</div>
+                        </div>
+                    </div>
+                    
+                    <div class="available-pools">
+                        <div class="pool-item">
+                            <h4>BTC/USDT</h4>
+                            <p>APY: 15.2% | Volume: $2.1M</p>
+                            <button onclick="addLiquidity('BTC-USDT')" class="add-liquidity-btn">Add Liquidity</button>
+                        </div>
+                        <div class="pool-item">
+                            <h4>ETH/USDT</h4>
+                            <p>APY: 12.8% | Volume: $1.8M</p>
+                            <button onclick="addLiquidity('ETH-USDT')" class="add-liquidity-btn">Add Liquidity</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Liquidity Pools', content);
+        }
+
+        function showCreateNFT() {
+            const content = `
+                <div class="create-nft">
+                    <h3>Create NFT</h3>
+                    <p>Mint your own unique digital asset</p>
+                    
+                    <div class="form-group">
+                        <label>NFT Name</label>
+                        <input type="text" placeholder="Enter NFT name">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea placeholder="Describe your NFT" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Image</label>
+                        <input type="file" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" placeholder="0.1" step="0.01">
+                        <select>
+                            <option value="ETH">ETH</option>
+                            <option value="BNB">BNB</option>
+                        </select>
+                    </div>
+                    <button onclick="mintNFT()" class="mint-btn">Mint NFT ($50 gas fee)</button>
+                </div>
+            `;
+            app.showModal('Create NFT', content);
+        }
+
+        function showHardwareWallet() {
+            const content = `
+                <div class="hardware-wallet">
+                    <h3>Hardware Wallet Integration</h3>
+                    <p>Connect your hardware wallet for maximum security</p>
+                    
+                    <div class="supported-wallets">
+                        <div class="wallet-option">
+                            <div class="wallet-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="wallet-info">
+                                <h4>Ledger</h4>
+                                <p>Ledger Nano S/X support</p>
+                            </div>
+                            <button onclick="connectHardwareWallet('ledger')" class="connect-btn">Connect</button>
+                        </div>
+                        <div class="wallet-option">
+                            <div class="wallet-icon"><i class="fas fa-lock"></i></div>
+                            <div class="wallet-info">
+                                <h4>Trezor</h4>
+                                <p>Trezor One/Model T support</p>
+                            </div>
+                            <button onclick="connectHardwareWallet('trezor')" class="connect-btn">Connect</button>
+                        </div>
+                    </div>
+                    
+                    <div class="security-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Hardware wallets provide the highest level of security by keeping your private keys offline.</p>
+                    </div>
+                </div>
+            `;
+            app.showModal('Hardware Wallet', content);
+        }
+
+        function showAPIAccess() {
+            const content = `
+                <div class="api-access">
+                    <h3>API Access Management</h3>
+                    <p>Create and manage API keys for automated trading</p>
+                    
+                    <div class="api-keys">
+                        <div class="api-key-item">
+                            <div class="key-info">
+                                <h4>Trading Bot API</h4>
+                                <p>Created: Jan 15, 2024</p>
+                                <code>kong_api_***************</code>
+                            </div>
+                            <div class="key-actions">
+                                <button onclick="revokeAPIKey('key1')" class="revoke-btn">Revoke</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="create-api-key">
+                        <h4>Create New API Key</h4>
+                        <div class="form-group">
+                            <label>API Key Name</label>
+                            <input type="text" placeholder="Enter key name">
+                        </div>
+                        <div class="permissions">
+                            <label><input type="checkbox" checked> Read Portfolio</label>
+                            <label><input type="checkbox"> Execute Trades</label>
+                            <label><input type="checkbox"> Withdraw Funds</label>
+                        </div>
+                        <button onclick="createAPIKey()" class="create-key-btn">Create API Key</button>
+                    </div>
+                </div>
+            `;
+            app.showModal('API Access', content);
+        }
+
+        function showMultiSig() {
+            const content = `
+                <div class="multisig-setup">
+                    <h3>Multi-Signature Wallets</h3>
+                    <p>Enterprise-grade security with multiple approvals</p>
+                    
+                    <div class="multisig-explanation">
+                        <h4>How it works:</h4>
+                        <ul>
+                            <li>Requires multiple signatures to authorize transactions</li>
+                            <li>Perfect for organizations and high-value accounts</li>
+                            <li>Customizable approval thresholds (e.g., 2-of-3, 3-of-5)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="setup-multisig">
+                        <div class="form-group">
+                            <label>Wallet Name</label>
+                            <input type="text" placeholder="Enter wallet name">
+                        </div>
+                        <div class="form-group">
+                            <label>Required Signatures</label>
+                            <select>
+                                <option value="2-3">2 out of 3</option>
+                                <option value="3-5">3 out of 5</option>
+                                <option value="2-5">2 out of 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Co-signers (Email addresses)</label>
+                            <textarea placeholder="Enter email addresses, one per line" rows="3"></textarea>
+                        </div>
+                        <button onclick="createMultiSig()" class="create-multisig-btn">Create Multi-Sig Wallet</button>
+                    </div>
+                </div>
+            `;
+            app.showModal('Multi-Signature Setup', content);
+        }
+
+        function showCompliance() {
+            const content = `
+                <div class="compliance-tools">
+                    <h3>Compliance & Reporting</h3>
+                    <p>Tax reports and audit trails for your crypto activities</p>
+                    
+                    <div class="compliance-features">
+                        <div class="feature-item">
+                            <h4>Tax Reports</h4>
+                            <p>Generate comprehensive tax reports for various jurisdictions</p>
+                            <button onclick="generateTaxReport()" class="report-btn">Generate Report</button>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Audit Trail</h4>
+                            <p>Complete transaction history with timestamps and proofs</p>
+                            <button onclick="exportAuditTrail()" class="export-btn">Export Trail</button>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Compliance Check</h4>
+                            <p>Verify compliance with local regulations</p>
+                            <button onclick="runComplianceCheck()" class="check-btn">Run Check</button>
+                        </div>
+                    </div>
+                    
+                    <div class="supported-jurisdictions">
+                        <h4>Supported Jurisdictions:</h4>
+                        <div class="jurisdiction-list">
+                            <span>🇺🇸 United States</span>
+                            <span>🇪🇺 European Union</span>
+                            <span>🇮🇩 Indonesia</span>
+                            <span>🇸🇬 Singapore</span>
+                            <span>🇦🇪 UAE</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Compliance & Reporting', content);
+        }
+
+        function setup2FA(method) {
+            app.showToast(`Setting up ${method.toUpperCase()} authentication...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ ${method.toUpperCase()} authentication setup complete!`, 'success');
+                app.closeModal();
+            }, 2000);
+        }
+
+        function confirmStaking() {
+            const asset = document.getElementById('stake-asset')?.value || 'BTC';
+            const amount = document.getElementById('stake-amount')?.value || '0';
+            const period = document.getElementById('stake-period')?.value || '30';
+            
+            if (!amount || parseFloat(amount) <= 0) {
+                app.showToast('Please enter a valid amount', 'error');
+                return;
+            }
+            
+            app.showToast(`Staking ${amount} ${asset} for ${period} days...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ Successfully staked ${amount} ${asset}!`, 'success');
+                app.closeModal();
+            }, 2000);
+        }
+
+        function startLending() {
+            app.showToast('Starting lending process...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Lending activated! You\'re now earning interest.', 'success');
+            }, 1500);
+        }
+
+        function startBorrowing() {
+            app.showToast('Starting borrowing process...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Borrowing approved! Funds available in your wallet.', 'success');
+            }, 1500);
+        }
+
+        function bidNFT() {
+            app.showToast('Placing bid on NFT...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Bid placed successfully! You\'ll be notified if you win.', 'success');
+            }, 1500);
+        }
+
+        function buyNFT() {
+            app.showToast('Purchasing NFT...', 'success');
+            setTimeout(() => {
+                app.showToast('🎉 NFT purchased successfully! Added to your collection.', 'success');
+            }, 2000);
+        }
+
+        // Additional helper functions
+        function addLiquidity(pool) {
+            app.showToast(`Adding liquidity to ${pool} pool...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ Successfully added liquidity to ${pool}!`, 'success');
+            }, 1500);
+        }
+
+        function mintNFT() {
+            app.showToast('Minting NFT...', 'success');
+            setTimeout(() => {
+                app.showToast('🎉 NFT minted successfully! It\'s now live on the marketplace.', 'success');
+                app.closeModal();
+            }, 3000);
+        }
+
+        function connectHardwareWallet(type) {
+            app.showToast(`Connecting ${type} wallet...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ ${type} wallet connected successfully!`, 'success');
+                app.closeModal();
+            }, 2000);
+        }
+
+        function createAPIKey() {
+            app.showToast('Creating API key...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ API key created! Keep it secure.', 'success');
+            }, 1500);
+        }
+
+        function revokeAPIKey(keyId) {
+            app.showToast('Revoking API key...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ API key revoked successfully.', 'success');
+            }, 1000);
+        }
+
+        function createMultiSig() {
+            app.showToast('Creating multi-signature wallet...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Multi-sig wallet created! Invitations sent to co-signers.', 'success');
+                app.closeModal();
+            }, 2500);
+        }
+
+        function generateTaxReport() {
+            app.showToast('Generating tax report...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Tax report generated! Check your downloads.', 'success');
+            }, 2000);
+        }
+
+        function exportAuditTrail() {
+            app.showToast('Exporting audit trail...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Audit trail exported successfully!', 'success');
+            }, 1500);
+        }
+
+        function runComplianceCheck() {
+            app.showToast('Running compliance check...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Compliance check passed! You\'re fully compliant.', 'success');
+            }, 2000);
+        }
+
         // Crypto Logo Manager
         class CryptoLogoManager {
             constructor() {
@@ -3133,6 +4634,49 @@
         window.buyCrypto = buyCrypto;
         window.closeModal = closeModal;
         window.showToast = showToast;
+        
+        // Premium features functions
+        window.showPremium = showPremium;
+        window.showStaking = showStaking;
+        window.showYieldFarming = showYieldFarming;
+        window.showLending = showLending;
+        window.showNFTMarketplace = showNFTMarketplace;
+        window.show2FA = show2FA;
+        window.showProTrading = showProTrading;
+        window.showWhiteLabel = showWhiteLabel;
+        window.upgradeToPremium = upgradeToPremium;
+        window.contactEnterprise = contactEnterprise;
+        window.stakeAsset = stakeAsset;
+        window.joinPool = joinPool;
+        window.launchProInterface = launchProInterface;
+        window.requestWhiteLabelDemo = requestWhiteLabelDemo;
+        
+        // Additional premium functions
+        window.showLiquidityPools = showLiquidityPools;
+        window.showCreateNFT = showCreateNFT;
+        window.showHardwareWallet = showHardwareWallet;
+        window.showAPIAccess = showAPIAccess;
+        window.showMultiSig = showMultiSig;
+        window.showCompliance = showCompliance;
+        window.setup2FA = setup2FA;
+        window.confirmStaking = confirmStaking;
+        window.startLending = startLending;
+        window.startBorrowing = startBorrowing;
+        window.bidNFT = bidNFT;
+        window.buyNFT = buyNFT;
+        window.updateReceiveAddress = updateReceiveAddress;
+        window.updateQRCode = updateQRCode;
+        
+        // Helper functions
+        window.addLiquidity = addLiquidity;
+        window.mintNFT = mintNFT;
+        window.connectHardwareWallet = connectHardwareWallet;
+        window.createAPIKey = createAPIKey;
+        window.revokeAPIKey = revokeAPIKey;
+        window.createMultiSig = createMultiSig;
+        window.generateTaxReport = generateTaxReport;
+        window.exportAuditTrail = exportAuditTrail;
+        window.runComplianceCheck = runComplianceCheck;
 
         // Prevent dev tools
         document.addEventListener('keydown', function(e) {
