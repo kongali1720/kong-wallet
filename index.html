@@ -645,6 +645,762 @@
             box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
         }
 
+        .quantum-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quantum-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .quantum-btn:hover:before {
+            left: 100%;
+        }
+
+        /* Revolutionary Features */
+        .revolutionary-features {
+            margin: 2rem 1rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-showcase {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #667eea;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-showcase:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .showcase-header h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .showcase-header p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .features-carousel {
+            position: relative;
+            min-height: 200px;
+        }
+
+        .feature-slide {
+            display: none;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-slide.active {
+            display: flex;
+        }
+
+        .feature-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hologram-effect {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            animation: hologram 2s infinite;
+        }
+
+        @keyframes hologram {
+            0%, 100% { 
+                transform: scale(1) rotateY(0deg);
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+            }
+            50% { 
+                transform: scale(1.1) rotateY(180deg);
+                box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
+            }
+        }
+
+        .feature-content {
+            flex: 2;
+            text-align: left;
+        }
+
+        .feature-content h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-item {
+            background: rgba(102, 126, 234, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #667eea;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #667eea;
+            transform: scale(1.2);
+        }
+
+        /* AI Trading Styles */
+        .ai-trading-container {
+            padding: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .ai-trading-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .ai-trading-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-trading-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .ai-status-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-status-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: aiPulse 2s infinite;
+        }
+
+        @keyframes aiPulse {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .ai-avatar {
+            position: relative;
+        }
+
+        .ai-brain {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            animation: brainPulse 1.5s infinite;
+        }
+
+        @keyframes brainPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .ai-pulse {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .ai-info {
+            flex: 1;
+        }
+
+        .ai-info h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .ai-info p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .ai-stat {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .ai-toggle {
+            position: relative;
+        }
+
+        .ai-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .ai-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .ai-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .ai-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .ai-slider {
+            background-color: #4CAF50;
+        }
+
+        input:checked + .ai-slider:before {
+            transform: translateX(26px);
+        }
+
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .strategy-card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card.active {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .strategy-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .strategy-info {
+            flex: 1;
+        }
+
+        .strategy-info h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .strategy-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .strategy-performance {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #4CAF50;
+        }
+
+        .strategy-status {
+            text-align: center;
+        }
+
+        .status-active {
+            background: #4CAF50;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .predictions-list {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .prediction-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .prediction-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .prediction-crypto {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex: 1;
+        }
+
+        .prediction-info h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .prediction-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .prediction-forecast {
+            text-align: right;
+        }
+
+        .forecast-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .forecast-change {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .forecast-change.positive {
+            color: #4CAF50;
+        }
+
+        .confidence {
+            font-size: 0.75rem;
+            color: #667eea;
+        }
+
+        .ai-chat {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .ai-chat h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .chat-container {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .chat-messages {
+            margin-bottom: 1rem;
+        }
+
+        .ai-message {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .message-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem;
+            border-radius: 12px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .message-content p {
+            color: white;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.875rem;
+        }
+
+        .chat-input input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .chat-input button {
+            padding: 0.75rem 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Metaverse Styles */
+        .metaverse-container {
+            padding: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .metaverse-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .metaverse-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .metaverse-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .metaverse-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .worlds-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .world-card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .world-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .world-preview {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .world-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            animation: worldPulse 2s infinite;
+        }
+
+        @keyframes worldPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .world-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .world-status.online {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .world-info h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .world-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .world-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #00ffff;
+        }
+
+        .enter-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .vr-trading {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .vr-trading h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .vr-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .vr-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .vr-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .vr-feature h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .vr-feature p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .vr-launch-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .vr-launch-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
         .action-btn span {
             font-size: 0.875rem;
             font-weight: 500;
@@ -2114,20 +2870,87 @@
                         <i class="fas fa-crown"></i>
                     </div>
                     <div class="premium-info">
-                        <h3>KONG Premium</h3>
-                        <p>Unlock advanced DeFi, NFT trading, and institutional features</p>
+                        <h3>KONG QUANTUM</h3>
+                        <p>🚀 Revolutionary quantum-powered trading platform</p>
                         <ul>
-                            <li>✓ Up to 25% APY Staking Rewards</li>
-                            <li>✓ Advanced Analytics & AI Insights</li>
-                            <li>✓ NFT Marketplace Access</li>
-                            <li>✓ Multi-Signature Wallets</li>
-                            <li>✓ API Access & Automation</li>
-                            <li>✓ White Label Solutions</li>
+                            <li>🤖 AI Trading Assistant (99.7% accuracy)</li>
+                            <li>🌐 Metaverse Integration & VR Trading</li>
+                            <li>⚡ Quantum Computing Security</li>
+                            <li>🧬 DNA-Based Authentication</li>
+                            <li>🛰️ Satellite Trading Network</li>
+                            <li>🔮 Time Travel Market Analysis</li>
+                            <li>🏢 Enterprise Quantum Solutions</li>
                         </ul>
                     </div>
-                    <button class="premium-btn" onclick="showPremium()">
-                        <i class="fas fa-star"></i> Upgrade to Premium
+                    <button class="premium-btn quantum-btn" onclick="showQuantumUpgrade()">
+                        <i class="fas fa-rocket"></i> Upgrade to QUANTUM
                     </button>
+                </div>
+            </div>
+            
+            <!-- Revolutionary Features Showcase -->
+            <div class="revolutionary-features">
+                <div class="feature-showcase">
+                    <div class="showcase-header">
+                        <h3>🚀 Revolutionary Features</h3>
+                        <p>Experience the future of crypto trading</p>
+                    </div>
+                    
+                    <div class="features-carousel">
+                        <div class="feature-slide active">
+                            <div class="feature-visual">
+                                <div class="hologram-effect">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>AI Trading Assistant</h4>
+                                <p>Quantum neural networks analyze 50,000+ patterns per second</p>
+                                <div class="feature-stats">
+                                    <span class="stat-item">847% YTD Returns</span>
+                                    <span class="stat-item">0.001ms Response</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-slide">
+                            <div class="feature-visual">
+                                <div class="hologram-effect">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Metaverse Trading</h4>
+                                <p>Virtual reality trading floors with holographic charts</p>
+                                <div class="feature-stats">
+                                    <span class="stat-item">$1.2M Virtual Assets</span>
+                                    <span class="stat-item">47 Land Plots</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-slide">
+                            <div class="feature-visual">
+                                <div class="hologram-effect">
+                                    <i class="fas fa-satellite"></i>
+                                </div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Satellite Network</h4>
+                                <p>Trade from space with ultra-low latency</p>
+                                <div class="feature-stats">
+                                    <span class="stat-item">Global Coverage</span>
+                                    <span class="stat-item">0.1ms Latency</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="showSlide(0)"></span>
+                        <span class="dot" onclick="showSlide(1)"></span>
+                        <span class="dot" onclick="showSlide(2)"></span>
+                    </div>
                 </div>
             </div>
 
@@ -2606,6 +3429,229 @@
             </div>
         </div>
 
+        <!-- AI Trading Tab -->
+        <div id="ai-trading-tab" class="tab-content">
+            <div class="ai-trading-container">
+                <div class="ai-trading-header">
+                    <h2>🤖 AI Trading Assistant</h2>
+                    <p>Revolutionary AI-powered trading with quantum algorithms</p>
+                </div>
+                
+                <div class="ai-status-card">
+                    <div class="ai-avatar">
+                        <div class="ai-brain">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="ai-pulse"></div>
+                    </div>
+                    <div class="ai-info">
+                        <h3>KONG AI v3.0</h3>
+                        <p>Quantum Neural Network • 99.7% Accuracy</p>
+                        <div class="ai-stats">
+                            <span class="ai-stat">⚡ 0.001ms Response</span>
+                            <span class="ai-stat">🎯 $2.5M Profit Today</span>
+                        </div>
+                    </div>
+                    <div class="ai-toggle">
+                        <label class="ai-switch">
+                            <input type="checkbox" checked>
+                            <span class="ai-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="ai-strategies">
+                    <h3>Active AI Strategies</h3>
+                    <div class="strategies-grid">
+                        <div class="strategy-card active">
+                            <div class="strategy-icon"><i class="fas fa-robot"></i></div>
+                            <div class="strategy-info">
+                                <h4>Quantum Arbitrage</h4>
+                                <p>Cross-exchange opportunities</p>
+                                <div class="strategy-performance">+847% YTD</div>
+                            </div>
+                            <div class="strategy-status">
+                                <span class="status-active">ACTIVE</span>
+                            </div>
+                        </div>
+                        
+                        <div class="strategy-card">
+                            <div class="strategy-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="strategy-info">
+                                <h4>Sentiment Analysis</h4>
+                                <p>Social media & news trading</p>
+                                <div class="strategy-performance">+623% YTD</div>
+                            </div>
+                            <div class="strategy-status">
+                                <span class="status-active">ACTIVE</span>
+                            </div>
+                        </div>
+                        
+                        <div class="strategy-card">
+                            <div class="strategy-icon"><i class="fas fa-eye"></i></div>
+                            <div class="strategy-info">
+                                <h4>Whale Tracking</h4>
+                                <p>Follow big money movements</p>
+                                <div class="strategy-performance">+1,234% YTD</div>
+                            </div>
+                            <div class="strategy-status">
+                                <span class="status-active">ACTIVE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-predictions">
+                    <h3>AI Market Predictions</h3>
+                    <div class="predictions-list">
+                        <div class="prediction-item">
+                            <div class="prediction-crypto">
+                                <div class="asset-icon btc"></div>
+                                <div class="prediction-info">
+                                    <h4>Bitcoin (BTC)</h4>
+                                    <p>Next 24h prediction</p>
+                                </div>
+                            </div>
+                            <div class="prediction-forecast">
+                                <div class="forecast-price">$68,500</div>
+                                <div class="forecast-change positive">+4.7%</div>
+                                <div class="confidence">97.3% confidence</div>
+                            </div>
+                        </div>
+                        
+                        <div class="prediction-item">
+                            <div class="prediction-crypto">
+                                <div class="asset-icon eth"></div>
+                                <div class="prediction-info">
+                                    <h4>Ethereum (ETH)</h4>
+                                    <p>Next 24h prediction</p>
+                                </div>
+                            </div>
+                            <div class="prediction-forecast">
+                                <div class="forecast-price">$3,420</div>
+                                <div class="forecast-change positive">+5.4%</div>
+                                <div class="confidence">94.8% confidence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-chat">
+                    <h3>Chat with KONG AI</h3>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="ai-chat-messages">
+                            <div class="ai-message">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content">
+                                    <p>Hello! I'm KONG AI, your personal trading assistant. I've analyzed 50,000+ market patterns and I'm ready to help you maximize profits. What would you like to know?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="ai-chat-input" placeholder="Ask me about trading strategies, market analysis, or predictions..." maxlength="500">
+                            <button onclick="sendAIMessage()"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metaverse Tab -->
+        <div id="metaverse-tab" class="tab-content">
+            <div class="metaverse-container">
+                <div class="metaverse-header">
+                    <h2>🌐 Metaverse Hub</h2>
+                    <p>Virtual reality trading and digital real estate</p>
+                </div>
+                
+                <div class="metaverse-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Virtual Assets</div>
+                        <div class="stat-value">$1.2M</div>
+                        <div class="stat-change positive">+156%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Land Owned</div>
+                        <div class="stat-value">47</div>
+                        <div class="stat-change positive">+12 plots</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Avatars</div>
+                        <div class="stat-value">23</div>
+                        <div class="stat-change positive">+3 new</div>
+                    </div>
+                </div>
+                
+                <div class="metaverse-worlds">
+                    <h3>Connected Metaverses</h3>
+                    <div class="worlds-grid">
+                        <div class="world-card">
+                            <div class="world-preview">
+                                <div class="world-icon"><i class="fas fa-globe"></i></div>
+                                <div class="world-status online">ONLINE</div>
+                            </div>
+                            <div class="world-info">
+                                <h4>Decentraland</h4>
+                                <p>Your virtual office: 3 plots</p>
+                                <div class="world-value">$245K value</div>
+                            </div>
+                            <button onclick="enterMetaverse('decentraland')" class="enter-btn">Enter World</button>
+                        </div>
+                        
+                        <div class="world-card">
+                            <div class="world-preview">
+                                <div class="world-icon"><i class="fas fa-gamepad"></i></div>
+                                <div class="world-status online">ONLINE</div>
+                            </div>
+                            <div class="world-info">
+                                <h4>The Sandbox</h4>
+                                <p>Gaming assets: 156 items</p>
+                                <div class="world-value">$89K value</div>
+                            </div>
+                            <button onclick="enterMetaverse('sandbox')" class="enter-btn">Enter World</button>
+                        </div>
+                        
+                        <div class="world-card">
+                            <div class="world-preview">
+                                <div class="world-icon"><i class="fas fa-building"></i></div>
+                                <div class="world-status online">ONLINE</div>
+                            </div>
+                            <div class="world-info">
+                                <h4>Horizon Worlds</h4>
+                                <p>VR Trading Floor</p>
+                                <div class="world-value">$1.2M volume</div>
+                            </div>
+                            <button onclick="enterMetaverse('horizon')" class="enter-btn">Enter World</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vr-trading">
+                    <h3>VR Trading Experience</h3>
+                    <div class="vr-features">
+                        <div class="vr-feature">
+                            <div class="vr-icon"><i class="fas fa-vr-cardboard"></i></div>
+                            <h4>3D Trading Floor</h4>
+                            <p>Immersive holographic charts</p>
+                        </div>
+                        <div class="vr-feature">
+                            <div class="vr-icon"><i class="fas fa-users"></i></div>
+                            <h4>Virtual Meetings</h4>
+                            <p>Meet investors in VR</p>
+                        </div>
+                        <div class="vr-feature">
+                            <div class="vr-icon"><i class="fas fa-hand-paper"></i></div>
+                            <h4>Gesture Trading</h4>
+                            <p>Trade with hand gestures</p>
+                        </div>
+                    </div>
+                    <button onclick="launchVRTrading()" class="vr-launch-btn">
+                        <i class="fas fa-rocket"></i> Launch VR Trading
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- Analytics Tab -->
         <div id="analytics-tab" class="tab-content">
             <div class="analytics-container">
@@ -2851,19 +3897,72 @@
                 </div>
                 
                 <div class="settings-section">
+                    <h3>🚀 Next-Gen Features</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Quantum Computing</div>
+                            <div class="setting-desc">Enable quantum-resistant encryption</div>
+                        </div>
+                        <button class="setting-btn" onclick="enableQuantumSecurity()">Enable</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Neural Network Trading</div>
+                            <div class="setting-desc">AI learns from your trading patterns</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Holographic Display</div>
+                            <div class="setting-desc">3D holographic portfolio view</div>
+                        </div>
+                        <button class="setting-btn" onclick="enableHolographicMode()">Activate</button>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>🌟 Exclusive Features</h3>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Time Travel Analysis</div>
+                            <div class="setting-desc">Analyze past market timelines</div>
+                        </div>
+                        <button class="setting-btn" onclick="showTimeTravelAnalysis()">Access</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">Satellite Trading</div>
+                            <div class="setting-desc">Trade from space satellites</div>
+                        </div>
+                        <button class="setting-btn" onclick="connectToSatellite()">Connect</button>
+                    </div>
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <div class="setting-name">DNA-Based Authentication</div>
+                            <div class="setting-desc">Biometric security at molecular level</div>
+                        </div>
+                        <button class="setting-btn" onclick="setupDNAAuth()">Setup</button>
+                    </div>
+                </div>
+                
+                <div class="settings-section">
                     <h3>About</h3>
                     <div class="settings-item">
                         <div class="setting-info">
                             <div class="setting-name">App Version</div>
-                            <div class="setting-desc">KONG WALLET v1.0.0</div>
+                            <div class="setting-desc">KONG WALLET v3.0.0 QUANTUM</div>
                         </div>
                     </div>
                     <div class="settings-item">
                         <div class="setting-info">
-                            <div class="setting-name">Support</div>
-                            <div class="setting-desc">Get help and contact support</div>
+                            <div class="setting-name">AI Assistant</div>
+                            <div class="setting-desc">24/7 AI support with 99.9% accuracy</div>
                         </div>
-                        <button class="setting-btn" onclick="showToast('Support feature coming soon!')">Contact</button>
+                        <button class="setting-btn" onclick="showAISupport()">Chat Now</button>
                     </div>
                 </div>
                 
@@ -2886,13 +3985,13 @@
             <div class="nav-icon"><i class="fas fa-chart-pie"></i></div>
             <span>Portfolio</span>
         </button>
-        <button class="nav-btn" onclick="showTab('DeFi')">
-            <div class="nav-icon"><i class="fas fa-coins"></i></div>
-            <span>DeFi</span>
+        <button class="nav-btn" onclick="showTab('AI-Trading')">
+            <div class="nav-icon"><i class="fas fa-robot"></i></div>
+            <span>AI Trade</span>
         </button>
-        <button class="nav-btn" onclick="showTab('NFT')">
-            <div class="nav-icon"><i class="fas fa-gem"></i></div>
-            <span>NFT</span>
+        <button class="nav-btn" onclick="showTab('Metaverse')">
+            <div class="nav-icon"><i class="fas fa-globe"></i></div>
+            <span>Metaverse</span>
         </button>
         <button class="nav-btn" onclick="showTab('Analytics')">
             <div class="nav-icon"><i class="fas fa-chart-bar"></i></div>
@@ -4502,6 +5601,371 @@
             }, 2000);
         }
 
+        // Revolutionary Features Functions
+        function showQuantumUpgrade() {
+            const content = `
+                <div class="quantum-upgrade">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div class="quantum-icon" style="font-size: 4rem; color: #667eea; margin-bottom: 1rem; animation: hologram 2s infinite;">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h2 style="color: #667eea; font-size: 2rem; margin-bottom: 0.5rem;">KONG QUANTUM</h2>
+                        <p style="color: rgba(255,255,255,0.8);">The world's first quantum-powered crypto platform</p>
+                    </div>
+                    
+                    <div class="quantum-features">
+                        <div class="quantum-feature">
+                            <div class="feature-icon" style="color: #667eea;"><i class="fas fa-brain"></i></div>
+                            <div class="feature-info">
+                                <h4>AI Trading Assistant</h4>
+                                <p>Quantum neural networks with 99.7% accuracy</p>
+                                <div class="feature-price">$999/month</div>
+                            </div>
+                        </div>
+                        
+                        <div class="quantum-feature">
+                            <div class="feature-icon" style="color: #00ffff;"><i class="fas fa-globe"></i></div>
+                            <div class="feature-info">
+                                <h4>Metaverse Integration</h4>
+                                <p>VR trading floors and virtual real estate</p>
+                                <div class="feature-price">$1,499/month</div>
+                            </div>
+                        </div>
+                        
+                        <div class="quantum-feature">
+                            <div class="feature-icon" style="color: #ff6b6b;"><i class="fas fa-satellite"></i></div>
+                            <div class="feature-info">
+                                <h4>Satellite Network</h4>
+                                <p>Global ultra-low latency trading</p>
+                                <div class="feature-price">$2,999/month</div>
+                            </div>
+                        </div>
+                        
+                        <div class="quantum-feature">
+                            <div class="feature-icon" style="color: #fbbf24;"><i class="fas fa-dna"></i></div>
+                            <div class="feature-info">
+                                <h4>DNA Authentication</h4>
+                                <p>Molecular-level security verification</p>
+                                <div class="feature-price">$4,999/month</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quantum-pricing">
+                        <div class="pricing-card featured">
+                            <h3>QUANTUM ULTIMATE</h3>
+                            <div class="quantum-price">$9,999<span>/month</span></div>
+                            <p>All features included + Priority support</p>
+                            <button onclick="upgradeToQuantum()" class="quantum-upgrade-btn">Upgrade Now</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('KONG QUANTUM Upgrade', content);
+        }
+
+        function upgradeToQuantum() {
+            app.showToast('🚀 Upgrading to QUANTUM...', 'success');
+            setTimeout(() => {
+                app.showToast('🎉 Welcome to KONG QUANTUM! The future is now!', 'success');
+                app.closeModal();
+            }, 2000);
+        }
+
+        function enableQuantumSecurity() {
+            app.showToast('🔐 Activating quantum-resistant encryption...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Quantum security enabled! Your wallet is now quantum-proof.', 'success');
+            }, 2000);
+        }
+
+        function enableHolographicMode() {
+            app.showToast('🌟 Initializing holographic display...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Holographic mode activated! Experience 3D portfolio visualization.', 'success');
+            }, 2000);
+        }
+
+        function showTimeTravelAnalysis() {
+            const content = `
+                <div class="time-travel-analysis">
+                    <h3>⏰ Time Travel Analysis</h3>
+                    <p>Analyze market patterns across different time periods</p>
+                    
+                    <div class="time-periods">
+                        <div class="time-period">
+                            <h4>🕐 Past Analysis</h4>
+                            <p>Analyze historical market data</p>
+                            <button onclick="analyzePast()" class="time-btn">Analyze Past</button>
+                        </div>
+                        
+                        <div class="time-period">
+                            <h4>⚡ Real-time</h4>
+                            <p>Current market conditions</p>
+                            <button onclick="analyzePresent()" class="time-btn">Analyze Now</button>
+                        </div>
+                        
+                        <div class="time-period">
+                            <h4>🔮 Future Predictions</h4>
+                            <p>AI-powered market forecasting</p>
+                            <button onclick="analyzeFuture()" class="time-btn">Predict Future</button>
+                        </div>
+                    </div>
+                    
+                    <div class="time-results">
+                        <h4>Analysis Results:</h4>
+                        <div class="result-item">
+                            <span class="result-label">Optimal Entry Point:</span>
+                            <span class="result-value">$64,250 (2 hours ago)</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Future Peak:</span>
+                            <span class="result-value">$78,500 (in 3 days)</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Risk Level:</span>
+                            <span class="result-value">Low (12%)</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('Time Travel Analysis', content);
+        }
+
+        function connectToSatellite() {
+            app.showToast('🛰️ Connecting to satellite network...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Connected to 12 satellites! Ultra-low latency trading enabled.', 'success');
+            }, 2000);
+        }
+
+        function setupDNAAuth() {
+            const content = `
+                <div class="dna-auth-setup">
+                    <h3>🧬 DNA Authentication Setup</h3>
+                    <p>Molecular-level security for your crypto assets</p>
+                    
+                    <div class="dna-steps">
+                        <div class="dna-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Sample Collection</h4>
+                                <p>Collect DNA sample using provided kit</p>
+                                <button onclick="orderDNAKit()" class="dna-btn">Order Kit ($299)</button>
+                            </div>
+                        </div>
+                        
+                        <div class="dna-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Lab Analysis</h4>
+                                <p>Quantum sequencing at secure facility</p>
+                                <div class="step-status">Pending kit delivery</div>
+                            </div>
+                        </div>
+                        
+                        <div class="dna-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Activation</h4>
+                                <p>Enable DNA-based authentication</p>
+                                <div class="step-status">Pending analysis</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dna-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>✓ 100% unique identification</li>
+                            <li>✓ Impossible to replicate</li>
+                            <li>✓ Quantum-level security</li>
+                            <li>✓ No passwords needed</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            app.showModal('DNA Authentication', content);
+        }
+
+        function showAISupport() {
+            const content = `
+                <div class="ai-support">
+                    <h3>🤖 AI Support Assistant</h3>
+                    <p>24/7 AI-powered customer support</p>
+                    
+                    <div class="ai-support-chat">
+                        <div class="support-messages">
+                            <div class="support-message ai">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content">
+                                    <p>Hello! I'm KONG Support AI. I can help you with trading strategies, technical issues, and account management. What can I assist you with today?</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="support-quick-actions">
+                            <h4>Quick Actions:</h4>
+                            <div class="quick-actions-grid">
+                                <button onclick="aiSupportAction('trading')" class="support-action-btn">Trading Help</button>
+                                <button onclick="aiSupportAction('technical')" class="support-action-btn">Technical Support</button>
+                                <button onclick="aiSupportAction('account')" class="support-action-btn">Account Issues</button>
+                                <button onclick="aiSupportAction('billing')" class="support-action-btn">Billing Support</button>
+                            </div>
+                        </div>
+                        
+                        <div class="support-input">
+                            <input type="text" placeholder="Type your question..." id="support-input">
+                            <button onclick="sendSupportMessage()"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            app.showModal('AI Support', content);
+        }
+
+        // AI Trading Functions
+        function sendAIMessage() {
+            const input = document.getElementById('ai-chat-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            const chatMessages = document.getElementById('ai-chat-messages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'user-message';
+            userMessage.innerHTML = `
+                <div class="message-avatar">👤</div>
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+            `;
+            chatMessages.appendChild(userMessage);
+            
+            // Clear input
+            input.value = '';
+            
+            // Simulate AI response
+            setTimeout(() => {
+                const aiResponses = [
+                    "Based on my analysis of 50,000+ market patterns, I recommend a diversified approach with 60% BTC, 25% ETH, and 15% altcoins for optimal risk-adjusted returns.",
+                    "The current market sentiment is bullish. My quantum algorithms predict a 73% probability of upward movement in the next 24 hours.",
+                    "I've detected whale activity in the BTC market. Large holders are accumulating, suggesting strong support at current levels.",
+                    "My neural network analysis shows strong correlation between social media sentiment and price movements. Current sentiment: 85% positive."
+                ];
+                
+                const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+                
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'ai-message';
+                aiMessage.innerHTML = `
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>${randomResponse}</p>
+                    </div>
+                `;
+                chatMessages.appendChild(aiMessage);
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Metaverse Functions
+        function enterMetaverse(world) {
+            app.showToast(`🌐 Entering ${world} metaverse...`, 'success');
+            setTimeout(() => {
+                app.showToast(`✅ Welcome to ${world}! Your avatar is ready.`, 'success');
+            }, 2000);
+        }
+
+        function launchVRTrading() {
+            app.showToast('🥽 Launching VR trading interface...', 'success');
+            setTimeout(() => {
+                app.showToast('🚀 VR Trading activated! Put on your headset for immersive experience.', 'success');
+            }, 2000);
+        }
+
+        // Carousel Functions
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.feature-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show selected slide
+            if (slides[index]) {
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+            
+            currentSlide = index;
+        }
+
+        // Auto-advance carousel
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 5000);
+
+        // Helper Functions
+        function analyzePast() {
+            app.showToast('🕐 Analyzing historical data...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Past analysis complete! Check results below.', 'success');
+            }, 1500);
+        }
+
+        function analyzePresent() {
+            app.showToast('⚡ Analyzing current market...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Real-time analysis complete!', 'success');
+            }, 1000);
+        }
+
+        function analyzeFuture() {
+            app.showToast('🔮 Predicting future trends...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ Future predictions generated!', 'success');
+            }, 2000);
+        }
+
+        function orderDNAKit() {
+            app.showToast('🧬 Ordering DNA collection kit...', 'success');
+            setTimeout(() => {
+                app.showToast('✅ DNA kit ordered! Express delivery in 24 hours.', 'success');
+            }, 1500);
+        }
+
+        function aiSupportAction(type) {
+            const responses = {
+                trading: "I can help you optimize your trading strategies. What specific trading question do you have?",
+                technical: "I'm here to help with technical issues. What problem are you experiencing?",
+                account: "I can assist with account-related questions. What do you need help with?",
+                billing: "I can help with billing and subscription questions. How can I assist you?"
+            };
+            
+            app.showToast(`AI Support: ${responses[type]}`, 'success');
+        }
+
+        function sendSupportMessage() {
+            const input = document.getElementById('support-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                app.showToast('Message sent to AI Support. Response in 3 seconds...', 'success');
+                input.value = '';
+                
+                setTimeout(() => {
+                    app.showToast('🤖 AI Support: I understand your question. Let me help you with that...', 'success');
+                }, 3000);
+            }
+        }
+
         // Crypto Logo Manager
         class CryptoLogoManager {
             constructor() {
@@ -4677,6 +6141,26 @@
         window.generateTaxReport = generateTaxReport;
         window.exportAuditTrail = exportAuditTrail;
         window.runComplianceCheck = runComplianceCheck;
+        
+        // Revolutionary features
+        window.showQuantumUpgrade = showQuantumUpgrade;
+        window.upgradeToQuantum = upgradeToQuantum;
+        window.enableQuantumSecurity = enableQuantumSecurity;
+        window.enableHolographicMode = enableHolographicMode;
+        window.showTimeTravelAnalysis = showTimeTravelAnalysis;
+        window.connectToSatellite = connectToSatellite;
+        window.setupDNAAuth = setupDNAAuth;
+        window.showAISupport = showAISupport;
+        window.sendAIMessage = sendAIMessage;
+        window.enterMetaverse = enterMetaverse;
+        window.launchVRTrading = launchVRTrading;
+        window.showSlide = showSlide;
+        window.analyzePast = analyzePast;
+        window.analyzePresent = analyzePresent;
+        window.analyzeFuture = analyzeFuture;
+        window.orderDNAKit = orderDNAKit;
+        window.aiSupportAction = aiSupportAction;
+        window.sendSupportMessage = sendSupportMessage;
 
         // Prevent dev tools
         document.addEventListener('keydown', function(e) {
